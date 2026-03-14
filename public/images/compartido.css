@@ -1,0 +1,48 @@
+.glyphicon-fixed{
+    top:2px;
+    margin-left: 5px;
+}
+
+/* Estilos modal */ 
+.modal-footer {
+  padding: 10px 12px;
+}
+.modal-content {
+  border-radius: 0px;
+}
+.modal-header{
+	 padding: 10px;
+	color:white;
+}
+.modal-header h4{
+    color:white;
+}
+.modal-header-primary{
+	background-color: #337ab7;
+	color: white;
+}
+.modal-header-default{
+  background-color:#777;
+  color: white;
+}
+.modal-header-info{
+	background-color: #5bc0de;
+	color: white;
+}
+.modal-header-success{
+	background-color:#5cb85c;
+	color: white;
+}
+.modal-header-warning{
+	background-color:#f0ad4e;
+	color: white;
+}
+.modal-header-danger{
+	background-color:#d9534f;
+	color: white;
+}
+
+a, a:hover, a:focus, a:visited, a:active{
+  text-decoration: none;
+  color:black;
+}
