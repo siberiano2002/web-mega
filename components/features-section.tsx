@@ -2,6 +2,7 @@
 
 import { Building2, Users, Leaf, Award, ArrowRight, Play } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { AnimatedSection, StaggeredChildren } from "./animated-section"
 import { useState } from "react"
 
@@ -124,10 +125,12 @@ export function FeaturesSection() {
                   >
                     {/* Background Image */}
                     <div className="absolute inset-0">
-                      <img
+                      <Image
                         src="https://img.youtube.com/vi/gzRgG9d_dRk/maxresdefault.jpg"
                         alt="Video preview"
-                        className="w-full h-full object-cover opacity-70"
+                        fill
+                        className="object-cover opacity-70"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </div>
                     

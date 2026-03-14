@@ -257,10 +257,12 @@ export default function RenovablesPage() {
                     >
                       {/* Background Image */}
                       <div className="absolute inset-0">
-                        <img
+                        <Image
                           src="https://img.youtube.com/vi/M-FO7AmRIfM/maxresdefault.jpg"
                           alt="Video preview"
-                          className="w-full h-full object-cover opacity-70"
+                          fill
+                          className="object-cover opacity-70"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                       
