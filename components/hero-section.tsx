@@ -36,11 +36,11 @@ export function HeroSection() {
   const getHeroImage = () => {
     switch (screenSize) {
       case 'mobile':
-        return '/images/slide-secadoras-mobile.jpg'
+        return '/images/secadoras5-mobile.jpg'
       case 'tablet':
-        return '/images/slide-secadoras-tablet.jpg'
+        return '/images/secadoras5-tablet.jpg'
       default:
-        return '/images/slide-secadoras.jpg'
+        return '/images/secadoras5.jpg'
     }
   }
 
@@ -56,12 +56,12 @@ export function HeroSection() {
   }
 
   return (
-    <section id="inicio" className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden">
+    <section id="inicio" className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-32">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src={getHeroImage()}
-          alt="Instalaciones industriales de secado de granos"
+          alt="Ingeniería MEGA S.A. - Soluciones industriales integrales"
           fill
           className="object-cover object-center"
           priority
@@ -77,58 +77,63 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative w-full flex items-center justify-center">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl mx-auto text-center">
+      <div className="relative w-full flex items-center justify-start lg:justify-start">
+        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-3xl text-left lg:text-left">
+            {/* Badge/Reseña */}
+            <p className="inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground/80 mb-4 sm:mb-6">
+              especialistas en
+            </p>
+            
             {/* Main Heading */}
             <h1 
               className={`text-3xl sm:text-4xl lg:text-5xl xl:text-7xl font-bold tracking-tight text-white leading-[1.1] transition-all duration-700 delay-100 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="block">Sistemas de</span>
+              <span className="block">Soluciones</span>
               <span className="block mt-1 sm:mt-2">
-                <span className="text-accent">Secado</span> de Granos
+                <span className="text-accent">Industriales</span> Integrales
               </span>
             </h1>
 
             {/* Description */}
-            <div className="mt-4 sm:mt-6 lg:mt-8 max-w-2xl mx-auto">
+            <div className="mt-4 sm:mt-6 lg:mt-8 max-w-2xl text-left">
               <p 
                 className={`text-sm sm:text-base lg:text-lg text-white/70 leading-relaxed transition-all duration-700 delay-200 ${
                   loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                El proceso de secado en su planta o industria es clave en el acondicionamiento de granos. 
-                En Ingeniería Mega S.A. usted encontrará el asesoramiento de especialistas en soluciones de secado.
+                Ingeniería MEGA S.A. es líder en soluciones industriales integrales con más de 25 años de experiencia. 
+                Especialistas en automatización, energías renovables, gas e infraestructura industrial.
               </p>
               <p 
                 className={`mt-2 sm:mt-4 text-sm sm:text-base lg:text-lg font-medium text-white/90 transition-all duration-700 delay-200 ${
                   loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                Ofrecemos la más alta tecnología en secado de granos.
+                Ofrecemos tecnología de punta y compromiso con la calidad en todos nuestros proyectos.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div 
-              className={`mt-8 sm:mt-10 lg:mt-12 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${
+              className={`mt-8 sm:mt-10 lg:mt-12 flex flex-col sm:flex-row gap-4 justify-start transition-all duration-700 delay-300 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
               <Button 
                 size="default" 
-                className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 sm:px-8 lg:px-10 h-12 sm:h-14 lg:h-16 text-sm sm:text-base font-semibold"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 sm:px-8 lg:px-10 h-10 sm:h-12 text-sm sm:text-base font-semibold"
                 onClick={() => scrollToSection("soluciones")}
               >
-                Explorar Soluciones
+                Explorar Divisiones
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button 
                 size="default" 
                 variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 hover:text-white rounded-full px-6 sm:px-8 lg:px-10 h-12 sm:h-14 lg:h-16 text-sm sm:text-base font-semibold bg-transparent"
+                className="border-white/30 text-white hover:bg-white/10 hover:text-white rounded-full px-6 sm:px-8 lg:px-10 h-10 sm:h-12 text-sm sm:text-base font-semibold bg-transparent"
                 onClick={() =>
                   window.open(
                     "https://www.youtube.com/@MEGA-ingenieria",
@@ -138,7 +143,7 @@ export function HeroSection() {
                 }
               >
                 <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 fill-current" />
-                Ver Video
+                Ver Videos
               </Button>
             </div>
           </div>

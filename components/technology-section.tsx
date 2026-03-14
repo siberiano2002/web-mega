@@ -58,13 +58,13 @@ export function TechnologySection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         {/* Header */}
         <AnimatedSection>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end mb-20">
+          <div className="grid grid-cols-1 gap-12 lg:gap-20 items-end mb-20">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
-                Tecnología
+                Centro de I+D Propio
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-                Innovación que impulsa la productividad
+                Nuestro laboratorio de investigación y desarrollo trabaja continuamente en mejorar la eficiencia y sustentabilidad de nuestros sistemas.
               </h2>
             </div>
             <div>
@@ -121,7 +121,7 @@ export function TechnologySection() {
         {/* Image with floating elements - Full Width */}
         <div className="relative -mx-6 lg:-mx-8">
           <AnimatedSection delay={400}>
-            <div className="mt-20 relative">
+            <div className="mt-24 relative">
               <div className="relative aspect-[21/9] overflow-hidden">
                 <Image
                   src="/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.png"
@@ -135,11 +135,10 @@ export function TechnologySection() {
                 <div className="absolute inset-0 flex items-start justify-center pt-8 sm:pt-12 lg:pt-16">
                   <div className="px-8 lg:px-12 text-center">
                     <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-                      Centro de I+D Propio
+                      Innovación Continua
                     </h3>
                     <p className="text-white/80 leading-relaxed">
-                      Nuestro laboratorio de investigación y desarrollo trabaja continuamente 
-                      en mejorar la eficiencia y sustentabilidad de nuestros sistemas.
+                      Desarrollamos soluciones avanzadas para optimizar procesos y maximizar eficiencia.
                     </p>
                   </div>
                 </div>

@@ -122,30 +122,30 @@ export function Footer() {
           {/* Links Redes Sociales */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold text-white mb-6">Síguenos</h3>
-            <div className="space-y-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a 
                 href="https://www.linkedin.com/company/ingenieria-mega/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-white transition-colors group"
+                className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Linkedin className="h-5 w-5" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors flex-shrink-0">
+                  <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
-                <span className="text-sm">LinkedIn</span>
-                <ArrowUpRight className="h-4 w-4 ml-auto" />
+                <span className="text-xs sm:text-sm">LinkedIn</span>
+                <ArrowUpRight className="h-3 w-3 sm:h-4 sm:w-4 ml-auto" />
               </a>
               <a 
                 href="https://www.youtube.com/@MEGA-ingenieria" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-white transition-colors group"
+                className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Youtube className="h-5 w-5" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors flex-shrink-0">
+                  <Youtube className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
-                <span className="text-sm">YouTube</span>
-                <ArrowUpRight className="h-4 w-4 ml-auto" />
+                <span className="text-xs sm:text-sm">YouTube</span>
+                <ArrowUpRight className="h-3 w-3 sm:h-4 sm:w-4 ml-auto" />
               </a>
             </div>
             

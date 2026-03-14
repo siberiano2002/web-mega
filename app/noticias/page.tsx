@@ -203,11 +203,11 @@ export default function NoticiasPage() {
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center mb-16">
+            <div className="text-left mb-16">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
                 <span className="text-white">Noticias</span>
               </h1>
-              <p className="mt-6 text-lg text-gray-200 max-w-2xl mx-auto">
+              <p className="mt-6 text-lg text-gray-200 max-w-2xl text-left">
                 Mantente informado sobre nuestros proyectos más recientes, capacitaciones, y las alianzas que estamos 
                 construyendo para llevar soluciones de ingeniería a toda la comunidad.
               </p>
@@ -217,86 +217,82 @@ export default function NoticiasPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-secondary">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/5"
-                >
-                  {/* Image Container */}
-                  <div className={`relative overflow-hidden bg-muted ${
-                    project.size === "large" ? "aspect-[16/10]" : "aspect-[4/3]"
-                  }`}>
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      priority={index < 3}
-                    />
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-4 sm:p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20">
-                        {project.category}
-                      </span>
-                      {project.location && (
-                        <div className="flex items-center gap-1 text-muted-foreground">
-                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 111.414 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                          </svg>
-                          <span className="text-sm">{project.location}</span>
-                        </div>
-                      )}
-                    </div>
-                    
-                    <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 line-clamp-2">
-                      {project.title}
-                    </h3>
-                    
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                      {project.description}
-                    </p>
-                    
-                    {/* Read More Button */}
-                    <button
-                      onClick={() => handleOpenModal(project)}
-                      className="mt-4 flex items-center gap-2 text-accent hover:text-accent/80 transition-colors text-sm font-medium"
-                    >
-                      <ChevronDown className="h-4 w-4" />
-                      Seguir leyendo...
-                    </button>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-blue-300 transition-all duration-300"
+              >
+                {/* Image Container */}
+                <div className="relative overflow-hidden bg-gray-100 aspect-[4/3]">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={index < 3}
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                 </div>
-              ))}
-            </div>
-          </AnimatedSection>
+
+                {/* Content */}
+                <div className="p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-600 rounded-full">
+                      {project.category}
+                    </span>
+                    {project.location && (
+                      <div className="flex items-center gap-1 text-gray-600">
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 111.414 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span className="text-xs">{project.location}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    {project.description}
+                  </p>
+                  
+                  {/* Read More Button */}
+                  <button
+                    onClick={() => handleOpenModal(project)}
+                    className="mt-4 flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors text-sm font-medium"
+                  >
+                    <ChevronDown className="h-4 w-4" />
+                    Seguir leyendo...
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* News Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="bg-card rounded-2xl shadow-2xl max-w-3xl w-full max-h-[80vh] overflow-hidden border border-border">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+          <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[80vh] overflow-hidden">
             {/* Modal Header */}
-            <div className="p-6 lg:p-8 border-b border-border">
+            <div className="p-6 border-b border-gray-200">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20">
+                    <span className="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-600 rounded-full">
                       {selectedProject.category}
                     </span>
                     {selectedProject.location && (
-                      <div className="flex items-center gap-1 text-muted-foreground">
+                      <div className="flex items-center gap-1 text-gray-600">
                         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 111.414 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -306,14 +302,14 @@ export default function NoticiasPage() {
                     )}
                   </div>
                   
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+                  <h2 className="text-2xl font-bold text-gray-900">
                     {selectedProject.title}
                   </h2>
                 </div>
                 
                 <button
                   onClick={handleCloseModal}
-                  className="ml-4 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 transition-colors flex items-center justify-center flex-shrink-0"
+                  className="ml-4 w-10 h-10 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-colors flex items-center justify-center flex-shrink-0"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -321,18 +317,21 @@ export default function NoticiasPage() {
             </div>
 
             {/* Modal Content */}
-            <div className="p-6 lg:p-8 overflow-y-auto max-h-[50vh] scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted-foreground/20 hover:scrollbar-thumb-muted-foreground/30">
-              <div className="prose prose-gray max-w-none">
-                <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                  {selectedProject.fullContent}
-                </div>
+            <div className="p-6 overflow-y-auto max-h-[50vh]">
+              <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                {selectedProject.fullContent}
               </div>
             </div>
 
             {/* Modal Footer */}
-            <div className="p-6 lg:p-8 border-t border-border">
+            <div className="p-6 border-t border-gray-200">
               <div className="flex justify-end">
-                {/* Botón de cerrar eliminado - solo queda el del header */}
+                <button
+                  onClick={handleCloseModal}
+                  className="px-6 py-2 bg-blue-600 text-white hover:bg-blue-700 rounded-lg font-medium transition-colors"
+                >
+                  Cerrar
+                </button>
               </div>
             </div>
           </div>
