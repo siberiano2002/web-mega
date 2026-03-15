@@ -582,20 +582,20 @@ export default function GasPage() {
                 <h3 className="text-xl font-bold text-foreground mb-4">Especificaciones técnicas</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Capacidad de almacenamiento</span>
-                    <span className="font-semibold text-foreground">Hasta 100 m³</span>
+                    <span className="text-sm sm:text-base text-muted-foreground">Capacidad de almacenamiento</span>
+                    <span className="font-semibold text-foreground text-sm sm:text-base">Hasta 100 m³</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Capacidad de vaporización</span>
-                    <span className="font-semibold text-foreground">100 - 10.000 kg/h</span>
+                    <span className="text-sm sm:text-base text-muted-foreground">Capacidad de vaporización</span>
+                    <span className="font-semibold text-foreground text-sm sm:text-base">100 - 10.000 kg/h</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Presión de operación</span>
-                    <span className="font-semibold text-foreground">Según requerimiento</span>
+                    <span className="text-sm sm:text-base text-muted-foreground">Presión de operación</span>
+                    <span className="font-semibold text-foreground text-sm sm:text-base">Según requerimiento</span>
                   </div>
-                  <div className="flex justify-between py-2">
-                    <span className="text-muted-foreground">Normativas aplicadas</span>
-                    <span className="font-semibold text-foreground">API, ASME, normas locales</span>
+                  <div className="flex justify-between py-2 border-b border-border">
+                    <span className="text-xs sm:text-sm text-muted-foreground">Normativas aplicadas</span>
+                    <span className="font-semibold text-foreground text-xs sm:text-sm">API, ASME, normas locales</span>
                   </div>
                 </div>
               </div>
@@ -659,7 +659,7 @@ export default function GasPage() {
             <div className="p-6 space-y-8">
               {/* Description */}
               <div className="space-y-4">
-                <p className="text-lg text-muted-foreground leading-relaxed text-justify">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed text-justify">
                   Ingeniería Mega S.A. diseña y proyecta plantas de regulación y medición de alta y media presión, plantas City Gate para distribuidoras y plantas paquetizadas modulares para industrias. La Empresa lleva a cabo el mantenimiento y calibración de equipos instalados.
                 </p>
               </div>
@@ -667,30 +667,30 @@ export default function GasPage() {
               {/* Features */}
               <div className="bg-card rounded-2xl p-6 border border-border">
                 <h3 className="text-xl font-bold text-foreground mb-4">Características principales</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">Regulación de alta y media presión</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">Regulación de alta y media presión</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">Plantas City Gate para distribuidoras</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">Plantas City Gate para distribuidoras</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">Plantas paquetizadas modulares</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">Plantas paquetizadas modulares</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">Aplicaciones industriales</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">Aplicaciones industriales</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">Mantenimiento preventivo</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">Mantenimiento preventivo</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">Calibración de equipos</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">Calibración de equipos</p>
                   </div>
                 </div>
               </div>

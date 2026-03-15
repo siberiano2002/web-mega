@@ -139,9 +139,6 @@ export function TechnologySection() {
                     <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                       Innovación Continua
                     </h3>
-                    <p className="text-white/80 leading-relaxed">
-                      Desarrollamos soluciones avanzadas para optimizar procesos y maximizar eficiencia.
-                    </p>
                   </div>
                 </div>
               </div>

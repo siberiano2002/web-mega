@@ -11,7 +11,7 @@ const features = [
     description: "Deseamos que conozca nuestra empresa y a sus integrantes. Forme parte de nuestra red de contactos en Linkedin.",
     icon: Building2,
     metric: "1995",
-    metricLabel: "Fundación",
+    metricLabel: "Fund.",
     url: "/empresa",
   },
   {

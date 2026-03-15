@@ -270,8 +270,8 @@ const projects = [
 
 const stats = [
   { label: "Países", value: "+30" },
-  { label: "Proyectos Internacionales", value: "+270" },
-  { label: "Años de Exportación", value: "+25" },
+  { label: "Proyectos Int.", value: "+270" },
+  { label: "Años Exp.", value: "+25" },
 ]
 
 export function InternationalSection() {

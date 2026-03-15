@@ -173,7 +173,8 @@ export default function RenovablesPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 sm:px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground/80">
-              Energías Renovables
+              <span className="hidden sm:inline">Energías Renovables</span>
+              <span className="sm:hidden">Energías Renov.</span>
             </p>
             <h1 className="mt-4 sm:mt-6 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight leading-tight">
               El diseño innovador que nos posiciona como{" "}
@@ -205,8 +206,8 @@ export default function RenovablesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Título Centrado */}
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground leading-tight mb-4 whitespace-nowrap">
-              ENERGÍAS <span className="text-accent">RENOVABLES</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground leading-tight mb-4">
+              <span className="block sm:inline">ENERGÍAS <span className="text-accent">RENOVABLES</span></span>
             </h2>
             
             {/* Preview de la descripción */}
@@ -275,7 +276,7 @@ export default function RenovablesPage() {
                         </div>
                         <div className="text-center">
                           <h3 className="text-2xl font-bold text-foreground mb-2">
-                            Energías Renovables en Acción
+                            <span className="block sm:inline">Energías Renovables <span className="sm:hidden">en</span> Acción</span>
                           </h3>
                           <p className="text-muted-foreground max-w-md">
                             Descubre nuestras soluciones de biomasa y energía solar fotovoltaica. Tecnología sustentable para reducir costos y huella de carbono.

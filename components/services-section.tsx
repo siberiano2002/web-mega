@@ -19,14 +19,14 @@ const products = [
     title: "Sistemas de Calor Industrial",
     description: "Intercambiadores de calor y sistemas térmicos para procesos industriales. Diseño personalizado según requerimientos específicos con recuperación de energía y optimización de consumo.",
     image: "/images/slide-gas.jpg",
-    specs: ["Recuperación térmica", "Diseño custom", "Alta durabilidad"],
+    specs: ["Recup. térm.", "Diseño custom", "Alta durab."],
   },
   {
     id: "renovables",
     title: "Soluciones de Energía Renovable",
     description: "Proyectos integrales de energía solar fotovoltaica para autoconsumo industrial. Diseño, instalación y mantenimiento de sistemas conectados a red con monitoreo remoto en tiempo real.",
     image: "/images/renewable-energy.jpg",
-    specs: ["On-grid/Off-grid", "Monitoreo 24/7", "ROI < 5 años"],
+    specs: ["On/Off-grid", "Monitor 24/7", "ROI < 5 años"],
   },
 ]
 

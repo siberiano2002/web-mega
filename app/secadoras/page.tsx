@@ -1892,7 +1892,7 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/secadoras1.jpg"
+                        src="/images/secadoras/secadora-mega-2.jpg"
                         alt="Sistema de control digital"
                         width={400}
                         height={300}
