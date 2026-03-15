@@ -86,7 +86,8 @@ export function Header() {
                   alt="MEGA Logo" 
                   width={32} 
                   height={32}
-                  className="rounded"
+                  sizes="32px"
+                  className="transition-transform group-hover:scale-105"
                 />
               </div>
             </div>

@@ -1,10 +1,9 @@
 "use client"
 
-import { Building2, Users, Leaf, Award, ArrowRight, Play } from "lucide-react"
+import { Building2, Users, Leaf, Award, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { AnimatedSection, StaggeredChildren } from "./animated-section"
-import { useState } from "react"
 
 const features = [
   {
@@ -42,12 +41,6 @@ const features = [
 ]
 
 export function FeaturesSection() {
-  const [isPlaying, setIsPlaying] = useState(true) // Auto play activado por defecto
-
-  const handlePlayVideo = () => {
-    setIsPlaying(true)
-  }
-
   return (
     <section className="py-16 sm:py-20 lg:py-32 bg-background relative overflow-hidden">
       {/* Background Pattern */}
@@ -110,61 +103,6 @@ export function FeaturesSection() {
             </Link>
           ))}
         </StaggeredChildren>
-        
-        {/* Video Section */}
-        <AnimatedSection delay={500}>
-          <div className="mt-20 max-w-5xl mx-auto">
-            <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-xl">
-              {/* Video Container */}
-              <div className="relative aspect-video">
-                {!isPlaying ? (
-                  // Video Thumbnail with Play Button
-                  <div 
-                    className="absolute inset-0 bg-gradient-to-br from-card/90 via-card/70 to-card/40 flex items-center justify-center cursor-pointer group"
-                    onClick={handlePlayVideo}
-                  >
-                    {/* Background Image */}
-                    <div className="absolute inset-0">
-                      <Image
-                        src="https://img.youtube.com/vi/gzRgG9d_dRk/maxresdefault.jpg"
-                        alt="Video preview"
-                        fill
-                        className="object-cover opacity-70"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                    </div>
-                    
-                    {/* Play Button Overlay */}
-                    <div className="relative z-10 flex flex-col items-center gap-4">
-                      <div className="w-20 h-20 bg-accent hover:bg-accent/90 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                        <Play className="w-10 h-10 text-accent-foreground fill-current ml-1" />
-                      </div>
-                      <div className="text-center">
-                        <h3 className="text-2xl font-bold text-foreground mb-2">
-                          Descubre Nuestra Historia
-                        </h3>
-                        <p className="text-muted-foreground max-w-md">
-                          Conoce más sobre Ingeniería Mega S.A., nuestra trayectoria y los proyectos que nos posicionan como líderes en la industria.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  // Embedded YouTube Video
-                  <div className="relative w-full h-full">
-                    <iframe
-                      src="https://www.youtube.com/embed/gzRgG9d_dRk?autoplay=1&mute=1&loop=1&playlist=gzRgG9d_dRk"
-                      title="Ingeniería Mega S.A. - Nuestra Historia"
-                      className="w-full h-full border-0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
       </div>
     </section>
   )

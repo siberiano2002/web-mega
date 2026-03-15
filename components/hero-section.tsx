@@ -64,6 +64,7 @@ export function HeroSection() {
           alt="Ingeniería MEGA S.A. - Soluciones industriales integrales"
           fill
           className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 1200px"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />

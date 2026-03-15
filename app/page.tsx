@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { ArrowUp } from "lucide-react"
 import Head from "next/head"
+import Script from "next/script"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { FeaturesSection } from "@/components/features-section"
@@ -47,8 +48,10 @@ export default function Home() {
         <meta name="twitter:description" content="Líderes en soluciones industriales integrales con más de 25 años de experiencia." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ingenieriamega.com" />
-        <script 
-          type="application/ld+json" 
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",

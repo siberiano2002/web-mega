@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { ArrowUp, CheckCircle, Zap, Shield, Globe, Award, Wrench, Play, ArrowRight, X, Eye } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { YouTubeThumbnail } from "@/components/youtube-thumbnail"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { AnimatedSection, StaggeredChildren } from "@/components/animated-section"
@@ -203,6 +204,7 @@ export default function SecadorasPage() {
               alt="Secadoras de granos MEGA en operación - Mobile"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
               priority
             />
           </div>
@@ -214,6 +216,7 @@ export default function SecadorasPage() {
               alt="Secadoras de granos MEGA en operación - Tablet"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
               priority
             />
           </div>
@@ -225,6 +228,7 @@ export default function SecadorasPage() {
               alt="Secadoras de granos MEGA en operación - Desktop"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
               priority
             />
           </div>
@@ -274,16 +278,24 @@ export default function SecadorasPage() {
             <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-xl">
               {/* Video Container */}
               <div className="relative aspect-video">
-                {/* Embedded YouTube Video con control de visibilidad */}
+                {/* YouTube Video with thumbnail-first loading */}
                 <div className="relative w-full h-full">
-                  <iframe
-                    ref={videoRef}
-                    id="mega-video"
-                    src="https://www.youtube.com/embed/wfM6UUHISRk?autoplay=1&mute=1&start=1&loop=1&playlist=wfM6UUHISRk&enablejsapi=1&origin=https://localhost:3000"
+                  <YouTubeThumbnail
+                    videoId="wfM6UUHISRk"
                     title="Secadoras de Granos MEGA - Tecnología de Flujo Mixto"
-                    className="w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                    id="mega-video"
+                    startTime={1}
+                    autoplay={true}
+                    mute={true}
+                    loop={true}
+                    enableJsApi={true}
+                    onVideoLoad={() => {
+                      // Update video reference when video loads
+                      const iframe = document.querySelector('#mega-video') as HTMLIFrameElement
+                      if (iframe) {
+                        videoRef.current = iframe
+                      }
+                    }}
                   />
                   {!isVideoVisible && (
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center">

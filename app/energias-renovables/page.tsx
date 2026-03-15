@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { ArrowUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { YouTubeThumbnail } from "@/components/youtube-thumbnail"
 import { ArrowRight, CheckCircle, Play, X } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -262,7 +263,8 @@ export default function RenovablesPage() {
                           alt="Video preview"
                           fill
                           className="object-cover opacity-70"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          sizes="(max-width: 768px) 100vw, 1200px"
+                          loading="lazy"
                         />
                       </div>
                       
@@ -282,16 +284,23 @@ export default function RenovablesPage() {
                       </div>
                     </div>
                   ) : (
-                    // Embedded YouTube Video
+                    // YouTube Video with thumbnail-first loading
                     <div className="relative w-full h-full">
-                      <iframe
-                        ref={videoRef}
-                        id="energias-video"
-                        src="https://www.youtube.com/embed/M-FO7AmRIfM?autoplay=1&mute=1&loop=1&playlist=M-FO7AmRIfM&enablejsapi=1&origin=https://localhost:3000"
+                      <YouTubeThumbnail
+                        videoId="M-FO7AmRIfM"
                         title="Energías Renovables MEGA - Biomasa y Solar Fotovoltaica"
-                        className="w-full h-full border-0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
+                        id="energias-video"
+                        autoplay={true}
+                        mute={true}
+                        loop={true}
+                        enableJsApi={true}
+                        onVideoLoad={() => {
+                          // Update video visibility state when video loads
+                          const iframe = document.querySelector('#energias-video') as HTMLIFrameElement
+                          if (iframe) {
+                            videoRef.current = iframe
+                          }
+                        }}
                       />
                       {!isVideoVisible && (
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">

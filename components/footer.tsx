@@ -23,7 +23,8 @@ export function Footer() {
                     alt="MEGA" 
                     width={32} 
                     height={32}
-                    className="text-white"
+                    sizes="32px"
+                    className="transition-transform group-hover:scale-105"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -86,6 +87,7 @@ export function Footer() {
                   alt="ADIMRA" 
                   width={120} 
                   height={60}
+                  sizes="120px"
                   className="object-contain"
                 />
               </div>
@@ -95,6 +97,7 @@ export function Footer() {
                   alt="CAFMA" 
                   width={120} 
                   height={60}
+                  sizes="120px"
                   className="object-contain"
                 />
               </div>
@@ -104,6 +107,7 @@ export function Footer() {
                   alt="MAGRIBA" 
                   width={120} 
                   height={60}
+                  sizes="120px"
                   className="object-contain"
                 />
               </div>
@@ -113,6 +117,7 @@ export function Footer() {
                   alt="DATAWEB" 
                   width={40} 
                   height={20}
+                  sizes="40px"
                   className="object-contain"
                 />
               </div>
