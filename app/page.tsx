@@ -6,6 +6,7 @@ import Head from "next/head"
 import Script from "next/script"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
+import { KeyMetricsSection } from "@/components/key-metrics-section"
 import { FeaturesSection } from "@/components/features-section"
 import { ServicesSection } from "@/components/services-section"
 import { TechnologySection } from "@/components/technology-section"
@@ -85,6 +86,7 @@ export default function Home() {
       <main className="overflow-hidden">
       <Header />
       <HeroSection />
+      <KeyMetricsSection />
       <FeaturesSection />
       <ServicesSection />
       <TechnologySection />

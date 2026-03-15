@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           
           {/* Logo + Descripción de la Empresa */}
           <div className="lg:col-span-1">
@@ -43,8 +43,8 @@ export function Footer() {
           {/* Contacto */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold text-white mb-6">Contacto</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
+            <div className="space-y-3">
+              <div className="flex items-start gap-2">
                 <Mail className="h-5 w-5 text-primary-foreground/60 mt-0.5 flex-shrink-0" />
                 <div>
                   <a 
@@ -55,7 +55,7 @@ export function Footer() {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-2">
                 <Phone className="h-5 w-5 text-primary-foreground/60 mt-0.5 flex-shrink-0" />
                 <div>
                   <a 
@@ -66,7 +66,7 @@ export function Footer() {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-primary-foreground/60 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-primary-foreground/80">
                   Acceso Hipólito Yrigoyen 195<br />
@@ -80,10 +80,10 @@ export function Footer() {
           {/* Imágenes Certificadas - Una debajo de la otra */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold text-white mb-6 text-center">Certificaciones</h3>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-1 md:space-y-4">
+            <div className="grid grid-cols-1 gap-2">
               <div className="flex justify-center">
                 <Image 
-                  src="/images/Adimra-ON.png" 
+                  src="/images/logo-adimra2x.png" 
                   alt="ADIMRA" 
                   width={120} 
                   height={60}
@@ -93,17 +93,7 @@ export function Footer() {
               </div>
               <div className="flex justify-center">
                 <Image 
-                  src="/images/CAFMA-ON.png" 
-                  alt="CAFMA" 
-                  width={120} 
-                  height={60}
-                  sizes="120px"
-                  className="object-contain"
-                />
-              </div>
-              <div className="flex justify-center">
-                <Image 
-                  src="/images/MAGRIBA-ON.png" 
+                  src="/images/logo-magriba.png" 
                   alt="MAGRIBA" 
                   width={120} 
                   height={60}
@@ -113,21 +103,21 @@ export function Footer() {
               </div>
               <div className="flex justify-center">
                 <Image 
-                  src="/images/DATAWEB-on.jpg" 
-                  alt="DATAWEB" 
-                  width={40} 
-                  height={20}
-                  sizes="40px"
+                  src="/images/logo-cafma.png" 
+                  alt="CAFMA" 
+                  width={120} 
+                  height={60}
+                  sizes="120px"
                   className="object-contain"
                 />
               </div>
             </div>
           </div>
 
-          {/* Links Redes Sociales */}
+          {/* Imágenes Adicionales */}
           <div className="lg:col-span-1">
-            <h3 className="text-lg font-semibold text-white mb-6">Síguenos</h3>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <h3 className="text-lg font-semibold text-white mb-6 text-center">Síguenos</h3>
+            <div className="flex flex-row gap-4 justify-center items-center">
               <a 
                 href="https://www.linkedin.com/company/ingenieria-mega/" 
                 target="_blank" 
@@ -138,7 +128,6 @@ export function Footer() {
                   <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
                 <span className="text-xs sm:text-sm">LinkedIn</span>
-                <ArrowUpRight className="h-3 w-3 sm:h-4 sm:w-4 ml-auto" />
               </a>
               <a 
                 href="https://www.youtube.com/@MEGA-ingenieria" 
@@ -150,15 +139,33 @@ export function Footer() {
                   <Youtube className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
                 <span className="text-xs sm:text-sm">YouTube</span>
-                <ArrowUpRight className="h-3 w-3 sm:h-4 sm:w-4 ml-auto" />
               </a>
             </div>
-            
-            {/* Firma de página - Texto */}
-            <div className="flex justify-end mt-6">
-              <p className="text-xs text-primary-foreground/60 font-medium tracking-wider hover:text-primary-foreground/80 transition-colors">
-                SIBERIANO ARTE & DISEÑO
-              </p>
+          </div>
+
+          {/* Links Redes Sociales */}
+          <div className="lg:col-span-1">
+            <div className="flex flex-row gap-4 justify-center items-center">
+              <div className="flex justify-center">
+                <Image 
+                  src="/images/DATAWEB-on.jpg" 
+                  alt="DATAWEB" 
+                  width={80} 
+                  height={40}
+                  sizes="80px"
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex justify-center">
+                <Image 
+                  src="/images/luzbelito.png" 
+                  alt="Luzbelito" 
+                  width={208} 
+                  height={104}
+                  sizes="208px"
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>

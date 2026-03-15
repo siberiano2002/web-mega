@@ -268,12 +268,6 @@ const projects = [
   },
 ]
 
-const stats = [
-  { label: "Países", value: "+30" },
-  { label: "Proyectos Int.", value: "+270" },
-  { label: "Años Exp.", value: "+25" },
-]
-
 export function InternationalSection() {
   const [activeProject, setActiveProject] = useState<typeof projects[0] | null>(null)
 
@@ -296,25 +290,13 @@ export function InternationalSection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
               International Engineering Projects
             </h2>
-            <p className="mt-6 text-lg text-primary-foreground/70 max-w-3xl mx-auto">
-              Desde nuestra base en Argentina, hemos expandido nuestra presencia por el mundo, llevando soluciones de ingeniería de clase a más de 30 países con más de 270 instalaciones exitosas.
+            <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed">
+              Desde nuestra base en Argentina, hemos expandido nuestra presencia por Latinoamérica y resto del mundo, 
+              llevando soluciones de ingeniería de clase mundial a cada rincón del planeta. Nuestra expansión internacional 
+              nos ha permitido establecer alianzas estratégicas y adaptar nuestras tecnologías a las necesidades específicas 
+              de cada mercado, consolidándonos como un referente global en el sector industrial con más de 270 instalaciones 
+              exitosas en más de 30 países.
             </p>
-          </div>
-        </AnimatedSection>
-
-        {/* Stats Bar */}
-        <AnimatedSection delay={100}>
-          <div className="flex justify-center gap-1.5 sm:gap-3 lg:gap-16 mb-8 sm:mb-12 overflow-x-auto">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center flex-shrink-0">
-                <div className="text-lg sm:text-xl lg:text-5xl font-bold text-accent mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-[9px] sm:text-[10px] text-primary-foreground/60 uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
           </div>
         </AnimatedSection>
 
