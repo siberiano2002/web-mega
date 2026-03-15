@@ -806,6 +806,7 @@ export default function RenovablesPage() {
                     alt="Parque Solar Fotovoltaico Ingeniería Mega"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                 </div>
@@ -854,6 +855,7 @@ export default function RenovablesPage() {
                       src="/images/energias-renovables/choclo.jpg"
                       alt="Biomasa no particulada - Leña y marlos de maíz"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                       className="object-cover"
                       loading="lazy"
                     />
@@ -884,6 +886,7 @@ export default function RenovablesPage() {
                       src="/images/energias-renovables/arroz.jpg"
                       alt="Biomasa particulada - Cáscaras de arroz y residuos finos"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                       className="object-cover"
                       loading="lazy"
                     />
@@ -1110,6 +1113,7 @@ export default function RenovablesPage() {
                     src="/images/energias-renovables/Silo-Biomasa.jpg"
                     alt="Silo de almacenamiento de biomasa"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     className="object-contain"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
@@ -1202,6 +1206,7 @@ export default function RenovablesPage() {
                         src="/images/energias-renovables/Cinta-transportadora.jpg"
                         alt="Sistema de alimentación de biomasa - Cinta transportadora"
                         fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 600px"
                         className="object-cover"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-center text-xs font-medium">
@@ -1213,6 +1218,7 @@ export default function RenovablesPage() {
                         src="/images/energias-renovables/chimango.jpg"
                         alt="Sistema de alimentación de biomasa - Chimango"
                         fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 600px"
                         className="object-cover"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-center text-xs font-medium">

@@ -467,6 +467,7 @@ export default function SecadorasPage() {
                       alt="Recorrido del grano en sistema de flujo mixto"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -551,6 +552,7 @@ export default function SecadorasPage() {
                       alt="Sistema de tempering cíclico"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -635,6 +637,7 @@ export default function SecadorasPage() {
                       alt="Sistema autolimpiante MEGA"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -719,6 +722,7 @@ export default function SecadorasPage() {
                       alt="Sistema de descarga MEGA"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -803,6 +807,7 @@ export default function SecadorasPage() {
                       alt="Sistema modular MEGA"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -891,6 +896,7 @@ export default function SecadorasPage() {
                       alt="Montaje en obra MEGA"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -971,6 +977,7 @@ export default function SecadorasPage() {
                       alt="Tablero de control digital"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1055,6 +1062,7 @@ export default function SecadorasPage() {
                       alt="Separadores de partículas livianas"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1143,6 +1151,7 @@ export default function SecadorasPage() {
                       alt="Sistema de aspiración secundaria de polvo"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1231,6 +1240,7 @@ export default function SecadorasPage() {
                       alt="Red contra incendios"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1319,6 +1329,7 @@ export default function SecadorasPage() {
                       alt="Atenuadores de ruido"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1407,6 +1418,7 @@ export default function SecadorasPage() {
                       alt="Sistema de limpieza con aire comprimido"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1495,6 +1507,7 @@ export default function SecadorasPage() {
                       alt="Aislación térmica"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1583,6 +1596,7 @@ export default function SecadorasPage() {
                       alt="Recuperación de calor"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1671,6 +1685,7 @@ export default function SecadorasPage() {
                       alt="Generadores de calor MEGA"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1755,6 +1770,7 @@ export default function SecadorasPage() {
                       alt="SERIE TC-V"
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                   </div>
@@ -1844,6 +1860,7 @@ export default function SecadorasPage() {
                         alt="Instalación de secadora MEGA"
                         width={400}
                         height={300}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                         className="aspect-video object-contain rounded-2xl shadow-lg w-full h-80 group-hover:scale-105 transition-transform duration-500 bg-muted/50"
                       />
                     </div>
@@ -1855,6 +1872,7 @@ export default function SecadorasPage() {
                         alt="Montaje de secadora modular"
                         width={400}
                         height={300}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                         className="aspect-video object-contain rounded-2xl shadow-lg w-full h-80 group-hover:scale-105 transition-transform duration-500 bg-muted/50"
                       />
                     </div>
@@ -1866,6 +1884,7 @@ export default function SecadorasPage() {
                         alt="Planta de secado MEGA"
                         width={400}
                         height={300}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                         className="aspect-video object-contain rounded-2xl shadow-lg w-full h-80 group-hover:scale-105 transition-transform duration-500 bg-muted/50"
                       />
                     </div>
@@ -1873,10 +1892,11 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/secadoras5.jpg"
+                        src="/images/secadoras/secadoras1.jpg"
                         alt="Sistema de control digital"
                         width={400}
                         height={300}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                         className="aspect-video object-contain rounded-2xl shadow-lg w-full h-80 group-hover:scale-105 transition-transform duration-500 bg-muted/50"
                       />
                     </div>
@@ -1888,6 +1908,7 @@ export default function SecadorasPage() {
                         alt="Instalación industrial completa"
                         width={400}
                         height={300}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                         className="aspect-video object-contain rounded-2xl shadow-lg w-full h-80 group-hover:scale-105 transition-transform duration-500 bg-muted/50"
                       />
                     </div>

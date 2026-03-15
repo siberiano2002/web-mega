@@ -66,6 +66,7 @@ export function AboutSection() {
                     alt={`INGENIERÍA MEGA - ${section.title}`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
                 </div>

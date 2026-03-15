@@ -8,6 +8,12 @@ import { AnimatedSection } from "@/components/animated-section"
 import Image from "next/image"
 import Link from "next/link"
 
+interface Section {
+  title: string
+  content: string
+  image: string
+}
+
 const sections = [
   {
     title: "RECURSOS TÉCNICOS",
@@ -17,18 +23,18 @@ const sections = [
   {
     title: "RECURSOS HUMANOS",
     content: "Las personas son el mayor capital de Ingeniería Mega S.A. Contamos con equipos interdisciplinarios de profesionales, ingenieros, técnicos, dibujantes y programadores, quienes generan nuevos proyectos, gestionan y ejecutan mejoras continuas de productos y servicios.\n\nEl equipo gerencial determina metas y objetivos a partir de análisis de oportunidades y conduce el desarrollo de las actividades de nuestra cadena de valor.",
-    image: "/images/964cce36-a5c4-48a9-9a72-0ab973046f7e.png"
+    image: "/images/964cce36-a5c4-48a9-9a72-0ab973046f7e.webp"
   },
   {
     title: "POSVENTA",
     content: "El equipo de capacitación y entrenamiento de Ingeniería Mega S.A., conformado por ingenieros y técnicos con una amplia experiencia en nuestros productos y servicios, está preparado para dar respuesta efectiva a la demanda de los clientes por su profundo conocimiento sobre el funcionamiento y mantenimiento de los productos.\n\nLos cursos y seminarios de formación que brinda este equipo se implementan en las oficinas del cliente, en el lugar de instalación del proyecto o en Ingeniería Mega S.A.\n\nLas capacitaciones están a cargo de:\n\nIng. Mauricio Heidenreich\nIng. Marcelo Lombardo\nIng. Dario Morales",
-    image: "/images/a120d424-bddf-4c44-922d-7796dda90f87.png"
+    image: "/images/a120d424-bddf-4c44-922d-7796dda90f87.webp"
   }
 ]
 
 export default function RecursosPage() {
   const [showScrollTop, setShowScrollTop] = useState(false)
-  const [selectedSection, setSelectedSection] = useState(null)
+  const [selectedSection, setSelectedSection] = useState<Section | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +52,7 @@ export default function RecursosPage() {
     })
   }
 
-  const openModal = (section) => {
+  const openModal = (section: Section) => {
     setSelectedSection(section)
   }
 

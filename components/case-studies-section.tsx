@@ -72,7 +72,7 @@ const caseStudies = [
     testimonial: "La capacitación gratuita nos ayudó a optimizar el uso de nuestros equipos.",
     author: "Cliente MEGA",
     role: "Usuario",
-    image: "/images/6708074350c14_IMG20241004125700.jpg",
+    image: "/images/6708074350c14_IMG20241004125700.webp",
     url: "/secadoras",
   },
 ]
@@ -112,6 +112,7 @@ export function CaseStudiesSection() {
                         alt={study.company}
                         fill
                         className="object-contain transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
                     </div>
