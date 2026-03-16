@@ -44,17 +44,6 @@ export function HeroSection() {
     }
   }
 
-  const getImageDimensions = () => {
-    switch (screenSize) {
-      case 'mobile':
-        return { width: 768, height: 1024 }
-      case 'tablet':
-        return { width: 1024, height: 768 }
-      default:
-        return { width: 1920, height: 1080 }
-    }
-  }
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (!element) return
@@ -68,22 +57,19 @@ export function HeroSection() {
 
   // Generar placeholder blur para LCP
   const generateBlurDataURL = () => {
-    return `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=`
+    return `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=`
   }
 
-  const { width, height } = getImageDimensions()
-
   return (
-    <section id="inicio" className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-32">
+    <section id="inicio" className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-32 pb-8 sm:pb-12 lg:pb-16">
       {/* Background Image - Optimizada para LCP */}
       <div className="absolute inset-0">
         <Image
           src={getHeroImage()}
           alt="Ingeniería MEGA S.A. - Soluciones industriales integrales"
-          width={width}
-          height={height}
+          fill
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1200px) 80vw, 70vw"
+          sizes="100vw"
           priority={true}
           loading="eager"
           placeholder="blur"

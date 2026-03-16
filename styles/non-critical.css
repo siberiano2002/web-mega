@@ -1,0 +1,38 @@
+/* CSS No Crítico - Carga Diferida */
+
+/* Componentes Below the Fold */
+.features-section { padding: 4rem 0; }
+.services-section { padding: 4rem 0; background: #f8fafc; }
+.technology-section { padding: 4rem 0; background: #1e293b; color: white; }
+.contact-section { padding: 4rem 0; }
+
+/* Animaciones y Transiciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover Effects */
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.btn:hover { transform: scale(1.05); transition: transform 0.2s; }
+
+/* Loading States */
+.skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
+@keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* Optimizaciones de scroll */
+.smooth-scroll { scroll-behavior: smooth; }
+.lazy-load { opacity: 0; transition: opacity 0.3s; }
+.lazy-load.loaded { opacity: 1; }
+
+/* Media Queries para responsive */
+@media (max-width: 768px) {
+  .features-section { padding: 2rem 0; }
+  .services-section { padding: 2rem 0; }
+  .technology-section { padding: 2rem 0; }
+  .contact-section { padding: 2rem 0; }
+}

@@ -2,6 +2,34 @@
 
 import { useEffect, useState, useRef, useCallback, useMemo } from "react"
 
+// ✅ Hook optimizado para throttling de funciones
+export function useThrottle<T extends (...args: any[]) => any>(
+  callback: T,
+  delay: number
+): T {
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const lastExecRef = useRef<number>(0)
+
+  return useCallback((...args: Parameters<T>) => {
+    const now = Date.now()
+    
+    if (now - lastExecRef.current > delay) {
+      lastExecRef.current = now
+      callback(...args)
+    } else {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
+      
+      timeoutRef.current = setTimeout(() => {
+        lastExecRef.current = Date.now()
+        callback(...args)
+        timeoutRef.current = null
+      }, delay - (now - lastExecRef.current))
+    }
+  }, [callback, delay]) as T
+}
+
 // ✅ Hook optimizado para throttling de resize
 export function useThrottledResize(callback: () => void, delay: number = 100) {
   const callbackRef = useRef(callback)
