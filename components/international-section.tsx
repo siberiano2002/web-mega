@@ -1,17 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { MapPin, ArrowUpRight } from "lucide-react"
-import { AnimatedSection, StaggeredChildren } from "./animated-section"
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  Marker,
-  ZoomableGroup,
-} from "react-simple-maps"
-
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+import { MapPin, ArrowUpRight } from "@/lib/icons-optimized"
+import { AnimatedSection } from "./animated-section"
 
 const projects = [
   {
@@ -171,7 +162,6 @@ const projects = [
     id: 19,
     country: "Francia",
     city: "París",
-    coordinates: [2.3, 48.9] as [number, number],
     type: "Engineering Services",
     projects: 12,
     description: "Servicios de ingeniería para Europa",
@@ -180,7 +170,6 @@ const projects = [
     id: 20,
     country: "Bielorrusia",
     city: "Minsk",
-    coordinates: [27.6, 53.9] as [number, number],
     type: "Industrial Equipment",
     projects: 8,
     description: "Equipamiento industrial para Europa del Este",
@@ -189,7 +178,6 @@ const projects = [
     id: 21,
     country: "Hungría",
     city: "Budapest",
-    coordinates: [19.0, 47.5] as [number, number],
     type: "Energy Systems",
     projects: 10,
     description: "Sistemas energéticos para Europa Central",
@@ -198,7 +186,6 @@ const projects = [
     id: 22,
     country: "Ucrania",
     city: "Kiev",
-    coordinates: [30.5, 50.4] as [number, number],
     type: "Agricultural Technology",
     projects: 18,
     description: "Tecnología agrícola para Europa del Este",
@@ -207,7 +194,6 @@ const projects = [
     id: 23,
     country: "Rusia",
     city: "Moscú",
-    coordinates: [37.6, 55.8] as [number, number],
     type: "Heavy Industry",
     projects: 22,
     description: "Equipamiento para industria pesada",
@@ -216,7 +202,6 @@ const projects = [
     id: 24,
     country: "Rumania",
     city: "Bucarest",
-    coordinates: [26.1, 44.4] as [number, number],
     type: "Energy Solutions",
     projects: 11,
     description: "Soluciones energéticas para los Balcanes",
@@ -225,7 +210,6 @@ const projects = [
     id: 25,
     country: "Indonesia",
     city: "Yakarta",
-    coordinates: [106.8, -6.2] as [number, number],
     type: "Palm Oil Industry",
     projects: 20,
     description: "Equipamiento para industria de aceite de palma",
@@ -234,7 +218,6 @@ const projects = [
     id: 26,
     country: "Bangladesh",
     city: "Daca",
-    coordinates: [90.4, 23.8] as [number, number],
     type: "Textile Industry",
     projects: 15,
     description: "Sistemas para industria textil",
@@ -243,7 +226,6 @@ const projects = [
     id: 27,
     country: "Turquía",
     city: "Estambul",
-    coordinates: [29.0, 41.0] as [number, number],
     type: "Manufacturing",
     projects: 18,
     description: "Equipamiento para manufactura",
@@ -252,7 +234,6 @@ const projects = [
     id: 28,
     country: "Kazajstán",
     city: "Almaty",
-    coordinates: [76.9, 43.2] as [number, number],
     type: "Mining Industry",
     projects: 12,
     description: "Equipamiento para industria minera",
@@ -261,7 +242,6 @@ const projects = [
     id: 29,
     country: "Angola",
     city: "Luanda",
-    coordinates: [13.2, -8.8] as [number, number],
     type: "Oil & Gas",
     projects: 9,
     description: "Equipamiento para industria petrolera y gas",
@@ -273,157 +253,125 @@ export function InternationalSection() {
 
   return (
     <section id="internacional" className="py-16 sm:py-20 lg:py-32 bg-primary text-primary-foreground relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
-
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
-        <AnimatedSection>
-          <div className="text-center mb-8 sm:mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
-              Presencia Global
-            </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-              International Engineering Projects
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <AnimatedSection delay={100}>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight mb-6">
+              <span className="text-white">Presencia </span>
+              <span className="text-accent">Internacional</span>
             </h2>
-            <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed">
-              Desde nuestra base en Argentina, hemos expandido nuestra presencia por Latinoamérica y resto del mundo, 
-              llevando soluciones de ingeniería de clase mundial a cada rincón del planeta. Nuestra expansión internacional 
-              nos ha permitido establecer alianzas estratégicas y adaptar nuestras tecnologías a las necesidades específicas 
-              de cada mercado, consolidándonos como un referente global en el sector industrial con más de 270 instalaciones 
-              exitosas en más de 30 países.
+            <p className="text-lg sm:text-xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
+              Más de 30 años de experiencia en proyectos internacionales, 
+              llevando soluciones de ingeniería de calidad a toda América Latina.
             </p>
           </div>
         </AnimatedSection>
 
-        {/* Full Width Map */}
+        {/* Stats */}
         <AnimatedSection delay={200}>
-          <div className="bg-primary-foreground/5 rounded-2xl p-3 sm:p-4 border border-primary-foreground/10 backdrop-blur-sm">
-            <ComposableMap
-              projection="geoMercator"
-              projectionConfig={{
-                center: [-60, -20],
-                scale: 400,
-              }}
-              style={{ width: "100%", height: "500px" }}
-            >
-              <ZoomableGroup>
-                <Geographies geography={geoUrl}>
-                  {({ geographies }: any) =>
-                    geographies.map((geo: any) => (
-                      <Geography
-                        key={geo.rsmKey}
-                        geography={geo}
-                        fill="rgba(255,255,255,0.08)"
-                        stroke="rgba(255,255,255,0.15)"
-                        strokeWidth={0.5}
-                        style={{
-                          default: { outline: "none" },
-                          hover: { outline: "none", fill: "rgba(255,255,255,0.12)" },
-                          pressed: { outline: "none" },
-                        }}
-                      />
-                    ))
-                  }
-                </Geographies>
-                
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-2">
+                +30
+              </div>
+              <div className="text-sm text-primary-foreground/70">
+                Países
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-2">
+                +270
+              </div>
+              <div className="text-sm text-primary-foreground/70">
+                Proyectos
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-2">
+                500+
+              </div>
+              <div className="text-sm text-primary-foreground/70">
+                Instalaciones
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-2">
+                24/7
+              </div>
+              <div className="text-sm text-primary-foreground/70">
+                Soporte
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Map Placeholder - Simplificado para evitar errores */}
+        <AnimatedSection delay={300}>
+          <div className="bg-primary-foreground/5 rounded-2xl p-8 sm:p-12 border border-primary-foreground/10 backdrop-blur-sm">
+            <div className="text-center">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 {projects.map((project) => (
-                  <Marker
+                  <div
                     key={project.id}
-                    coordinates={project.coordinates}
-                    onMouseEnter={() => setActiveProject(project)}
-                    onMouseLeave={() => setActiveProject(null)}
+                    className="text-center p-4 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors cursor-pointer"
+                    onClick={() => setActiveProject(project)}
                   >
-                    <g className="cursor-pointer">
-                      {/* Pulse animation */}
-                      <circle
-                        r={project.type === "Headquarters" ? 12 : 8}
-                        fill="currentColor"
-                        className="text-accent/30 animate-ping"
-                      />
-                      {/* Pulse animation */}
-                      <circle
-                        r={project.type === "Headquarters" ? 12 : 8}
-                        fill="currentColor"
-                        className="text-accent/30 animate-ping"
-                        style={{ animationDelay: "1s" }}
-                      />
-                      {/* Main marker */}
-                      <circle
-                        r={project.type === "Headquarters" ? 8 : 5}
-                        fill="currentColor"
-                        className={`${
-                          activeProject?.id === project.id 
-                            ? "text-accent" 
-                            : project.type === "Headquarters" 
-                              ? "text-accent" 
-                              : "text-primary-foreground"
-                        } transition-colors`}
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      />
-                      {/* Country label */}
-                      <text
-                        x={project.type === "Headquarters" ? 20 : 15}
-                        y={5}
-                        fill="currentColor"
-                        className={`${
-                          activeProject?.id === project.id 
-                            ? "text-accent" 
-                            : project.type === "Headquarters" 
-                              ? "text-accent" 
-                              : "text-primary-foreground"
-                        } transition-colors text-xs font-medium`}
-                        style={{
-                          textAnchor: 'start',
-                          dominantBaseline: 'middle',
-                          fontSize: '12px',
-                          fontWeight: '600',
-                          textShadow: '0 1px 2px rgba(0,0,0,0.3)'
-                        }}
-                      >
-                        {project.country}
-                      </text>
-                    </g>
-                  </Marker>
-                ))}
-              </ZoomableGroup>
-            </ComposableMap>
-            
-            {/* Active project tooltip */}
-            {activeProject && (
-              <div className="absolute bottom-8 left-8 bg-card text-card-foreground rounded-xl p-4 shadow-2xl max-w-xs border border-border">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-accent" />
+                    <div className="w-4 h-4 bg-accent rounded-full mx-auto mb-2"></div>
+                    <h4 className="font-semibold text-white text-sm mb-1">{project.country}</h4>
+                    <p className="text-xs text-primary-foreground/70">{project.city}</p>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">{activeProject.country}</h4>
-                    <p className="text-sm text-muted-foreground">{activeProject.city}</p>
-                    <p className="text-xs text-accent mt-1">{activeProject.projects} proyectos</p>
-                    <p className="text-xs text-muted-foreground mt-1">{activeProject.type}</p>
-                    <p className="text-xs text-muted-foreground mt-2">{activeProject.description}</p>
+                ))}
+              </div>
+              
+              {/* Active project details */}
+              {activeProject && (
+                <div className="bg-card text-card-foreground rounded-xl p-6 max-w-md mx-auto border border-border">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-foreground text-lg mb-1">{activeProject.country}</h4>
+                      <p className="text-sm text-muted-foreground mb-3">{activeProject.city}</p>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded-full">
+                          {activeProject.type}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {activeProject.projects} proyectos
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        {activeProject.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </AnimatedSection>
 
         {/* CTA */}
         <AnimatedSection delay={400}>
           <div className="mt-16 text-center">
-            <a 
-              href="#contacto" 
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-full font-semibold hover:bg-accent/90 transition-colors group"
-            >
-              Expandir a nuevos mercados
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              ¿Listo para tu próximo proyecto internacional?
+            </h3>
+            <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+              Contáctanos y descubre cómo nuestra experiencia puede beneficiar tu operación.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contacto"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 py-3 text-sm font-semibold transition-colors"
+              >
+                <MapPin className="w-4 h-4" />
+                Contactar para Proyectos Internacionales
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </AnimatedSection>
       </div>

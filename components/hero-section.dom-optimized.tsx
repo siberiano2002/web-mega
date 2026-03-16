@@ -2,8 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play } from "@/lib/icons-optimized"
-import { useCallback } from "react"
+import { ArrowRight, Play } from "lucide-react"
 
 // ✅ Componentes atómicos para reducir DOM
 function HeroBackground() {
@@ -16,10 +15,10 @@ function HeroBackground() {
         height={1080}
         className="object-cover object-center"
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1200px) 80vw, 70vw"
-        priority={true}  // ✅ Imagen LCP marcada como priority
+        priority={true}
         loading="eager"
         placeholder="blur"
-        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         quality={85}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
@@ -38,18 +37,17 @@ function HeroDecorations() {
 }
 
 function HeroContent() {
-  // ✅ Memoizar función de scroll para evitar re-renders
-  const scrollToSection = useCallback((id: string) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (!element) return
 
     const yOffset = -80
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
     window.scrollTo({ top: y, behavior: "smooth" })
-  }, [])
+  }
 
   return (
-    <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
+    <div className="relative z-10 mx-auto max-w-7xl px-6 text-center animate-fade-in">
       <p className="inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 mb-6">
         especialistas en
       </p>

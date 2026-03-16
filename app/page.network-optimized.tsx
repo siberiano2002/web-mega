@@ -1,30 +1,16 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
-import { ArrowUp } from "@/lib/icons-optimized"
+import { useState, useEffect } from "react"
+import { ArrowUp } from "lucide-react"
 import Head from "next/head"
 import Script from "next/script"
-import dynamic from 'next/dynamic'
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
+import { KeyMetricsSection } from "@/components/key-metrics-section"
+import { FeaturesSection } from "@/components/features-section"
+import dynamic from 'next/dynamic'
 
-// ✅ Componentes pesados con lazy loading para reducir bundle inicial
-const KeyMetricsSection = dynamic(
-  () => import("@/components/key-metrics-section").then(mod => ({ default: mod.KeyMetricsSection })),
-  { 
-    ssr: false,
-    loading: () => <div className="h-32 bg-gray-100 animate-pulse rounded-lg" />
-  }
-)
-
-const FeaturesSection = dynamic(
-  () => import("@/components/features-section").then(mod => ({ default: mod.FeaturesSection })),
-  { 
-    ssr: false,
-    loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded-lg" />
-  }
-)
-
+// ✅ Componentes pesados con lazy loading para optimizar red
 const ServicesSection = dynamic(
   () => import("@/components/services-section").then(mod => ({ default: mod.ServicesSection })),
   { 
@@ -68,35 +54,29 @@ const Footer = dynamic(
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
 
-  // ✅ useEffect optimizado con throttling para evitar long tasks
+  // ✅ useEffect optimizado para no bloquear render
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout | null = null
-
-    const handleScroll = () => {
-      // ✅ Throttling para no ejecutar en cada pixel de scroll
-      if (timeoutId) return
-
-      timeoutId = setTimeout(() => {
+    const setupScrollListener = () => {
+      const handleScroll = () => {
         setShowScrollTop(window.scrollY > 400)
-        timeoutId = null
-      }, 100) // 100ms de throttling
+      }
+      window.addEventListener("scroll", handleScroll, { passive: true })
+      return () => window.removeEventListener("scroll", handleScroll)
     }
 
-    // ✅ Event listener con passive: true para mejor performance
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      if (timeoutId) clearTimeout(timeoutId)
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(setupScrollListener)
+    } else {
+      setTimeout(setupScrollListener, 100)
     }
   }, [])
 
-  // ✅ Memoizar función de scroll para evitar re-renders
-  const scrollToTop = useCallback(() => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     })
-  }, [])
+  }
 
   return (
     <>
@@ -115,11 +95,29 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ingenieriamega.com" />
         
+        {/* ✅ Preload de recursos críticos para optimizar red */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/secadoras5.jpg"
+          imageSrcSet="/images/secadoras5.webp 1920w, /images/secadoras5-tablet.webp 1024w, /images/secadoras5-mobile.webp 768w"
+          imageSizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 1920px"
+        />
+        
+        <link
+          rel="preload"
+          as="image"
+          href="/images/logo.png"
+          imageSrcSet="/images/logo.webp 200w, /images/logo.png 200w"
+          imageSizes="200px"
+        />
+        
         {/* ✅ DNS prefetch para recursos externos */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//vercel.live" />
         <link rel="dns-prefetch" href="//www.youtube.com" />
         
+        {/* ✅ Script de structured data con lazyOnload */}
         <Script
           id="structured-data"
           type="application/ld+json"

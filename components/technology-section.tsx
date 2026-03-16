@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Cpu, Gauge, Shield, Zap, Wifi, BarChart3 } from "lucide-react"
+import { Cpu, Gauge, Shield, Zap, Wifi, BarChart3 } from "@/lib/icons-optimized"
 import { AnimatedSection, StaggeredChildren } from "./animated-section"
 
 const technologies = [
@@ -126,10 +126,14 @@ export function TechnologySection() {
                 <Image
                   src="/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.png"
                   alt="Control de calidad y tecnología industrial"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 1200px"
+                  width={1200}
+                  height={600}
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
                   loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                  quality={85}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent" />
                 

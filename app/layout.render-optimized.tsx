@@ -3,21 +3,19 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 
-// ✅ Fuentes optimizadas con display: swap y preload
+// ✅ Fuentes optimizadas para evitar render blocking
 const inter = Inter({ 
   subsets: ["latin"],
   variable: '--font-inter',
-  display: 'swap',      // ✅ Permite render con fallback
-  preload: true,        // ✅ Preload crítico
-  weight: ['400', '600', '700'] // ✅ Solo pesos necesarios
+  display: 'swap',  // ✅ Permite render con fuente de sistema
+  preload: true     // ✅ Preload crítico
 });
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
   variable: '--font-space-grotesk',
-  display: 'swap',      // ✅ Permite render con fallback
-  preload: false,       // ✅ Carga bajo demanda
-  weight: ['400', '700'] // ✅ Solo pesos necesarios
+  display: 'swap',  // ✅ Permite render con fuente de sistema
+  preload: false    // ✅ No preload, carga bajo demanda
 });
 
 export const metadata: Metadata = {
@@ -36,22 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
-      <head>
-        {/* ✅ Preload de imagen LCP existente */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/secadoras5.jpg"
-          imageSizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 1920px"
-        />
-        
-        {/* ✅ DNS prefetch y preconnect para recursos externos */}
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
-      
+    <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         {children}
         

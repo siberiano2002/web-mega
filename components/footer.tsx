@@ -89,6 +89,9 @@ export function Footer() {
                   height={60}
                   sizes="120px"
                   className="object-contain"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhQDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 />
               </div>
               <div className="flex justify-center">
@@ -99,6 +102,9 @@ export function Footer() {
                   height={60}
                   sizes="120px"
                   className="object-contain"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhQDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 />
               </div>
               <div className="flex justify-center">
@@ -109,6 +115,9 @@ export function Footer() {
                   height={60}
                   sizes="120px"
                   className="object-contain"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhQDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 />
               </div>
             </div>
@@ -154,6 +163,9 @@ export function Footer() {
                   height={40}
                   sizes="80px"
                   className="object-contain"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                 />
               </div>
               <div className="flex justify-center">
@@ -164,6 +176,9 @@ export function Footer() {
                   height={104}
                   sizes="208px"
                   className="object-contain"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhQDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                 />
               </div>
             </div>

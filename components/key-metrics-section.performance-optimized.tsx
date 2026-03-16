@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useCallback, useMemo } from "react"
+import { useIdleAnimation } from "@/hooks/performance-hooks"
 
 const keyMetrics = [
   { 
@@ -18,54 +19,8 @@ const keyMetrics = [
 ]
 
 export function KeyMetricsSection() {
-  const [visibleMetrics, setVisibleMetrics] = useState<Set<number>>(new Set())
-  const metricsRef = useRef(keyMetrics)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
-
-  useEffect(() => {
-    metricsRef.current = keyMetrics
-  }, [])
-
-  useEffect(() => {
-    const scheduleAnimation = () => {
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback((deadline) => {
-          animateMetrics(deadline)
-        }, { timeout: 1000 })
-      } else {
-        setTimeout(() => animateMetrics({ 
-          timeRemaining: () => 16, 
-          didTimeout: false 
-        } as IdleDeadline), 100)
-      }
-    }
-
-    const animateMetrics = (deadline: IdleDeadline) => {
-      const metrics = metricsRef.current
-      let index = 0
-
-      const animateNext = () => {
-        while (index < metrics.length && deadline.timeRemaining() > 1) {
-          setVisibleMetrics(prev => new Set([...prev, index]))
-          index++
-        }
-
-        if (index < metrics.length) {
-          requestIdleCallback(animateNext)
-        }
-      }
-
-      animateNext()
-    }
-
-    timeoutRef.current = setTimeout(scheduleAnimation, 300)
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
-      }
-    }
-  }, [])
+  // ✅ Usar hook optimizado para animaciones
+  const visibleMetrics = useIdleAnimation(keyMetrics, 300, 200)
 
   return (
     <section className="relative bg-zinc-800 text-white">
