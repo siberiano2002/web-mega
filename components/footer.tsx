@@ -79,7 +79,7 @@ export function Footer() {
 
           {/* Imágenes Certificadas - Una debajo de la otra */}
           <div className="lg:col-span-1">
-            <h3 className="text-lg font-semibold text-white mb-6 text-center">Certificaciones</h3>
+            <h3 className="text-lg font-semibold text-white mb-6 text-center underline underline-offset-4 decoration-white">Certificaciones</h3>
             <div className="grid grid-cols-1 gap-2">
               <div className="flex justify-center">
                 <Image 
@@ -116,7 +116,7 @@ export function Footer() {
 
           {/* Imágenes Adicionales */}
           <div className="lg:col-span-1">
-            <h3 className="text-lg font-semibold text-white mb-6 text-center">Síguenos</h3>
+            <h3 className="text-lg font-semibold text-white mb-6 text-center underline underline-offset-4 decoration-white">Síguenos</h3>
             <div className="flex flex-row gap-4 justify-center items-center">
               <a 
                 href="https://www.linkedin.com/company/ingenieria-mega/" 
