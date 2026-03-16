@@ -1,30 +1,16 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
-import { ArrowUp } from "@/lib/icons-optimized"
+import { ArrowUp } from "lucide-react"
 import Head from "next/head"
 import Script from "next/script"
 import dynamic from 'next/dynamic'
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
+import { KeyMetricsSection } from "@/components/key-metrics-section"
+import { FeaturesSection } from "@/components/features-section"
 
 // ✅ Componentes pesados con lazy loading para reducir bundle inicial
-const KeyMetricsSection = dynamic(
-  () => import("@/components/key-metrics-section").then(mod => ({ default: mod.KeyMetricsSection })),
-  { 
-    ssr: false,
-    loading: () => <div className="h-32 bg-gray-100 animate-pulse rounded-lg" />
-  }
-)
-
-const FeaturesSection = dynamic(
-  () => import("@/components/features-section").then(mod => ({ default: mod.FeaturesSection })),
-  { 
-    ssr: false,
-    loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded-lg" />
-  }
-)
-
 const ServicesSection = dynamic(
   () => import("@/components/services-section").then(mod => ({ default: mod.ServicesSection })),
   { 

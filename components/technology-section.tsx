@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Cpu, Gauge, Shield, Zap, Wifi, BarChart3 } from "@/lib/icons-optimized"
+import { Cpu, Gauge, Shield, Zap, Wifi, BarChart3 } from "lucide-react"
 import { AnimatedSection, StaggeredChildren } from "./animated-section"
 
 const technologies = [
@@ -79,23 +79,25 @@ export function TechnologySection() {
 
         {/* Technology Grid */}
         <StaggeredChildren 
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mb-20"
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-20"
           staggerDelay={100}
         >
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8 hover:bg-white/10 hover:border-accent/30 transition-all duration-500"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sm:p-8 lg:p-10 hover:bg-white/10 hover:border-accent/30 transition-all duration-500 flex flex-col h-full"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-accent/20 flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:bg-accent/30 transition-colors">
-                <tech.icon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl bg-accent/20 flex items-center justify-center mb-4 sm:mb-6 lg:mb-8 group-hover:bg-accent/30 transition-colors flex-shrink-0">
+                <tech.icon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-accent" />
               </div>
-              <h3 className="text-sm sm:text-base md:text-xl font-semibold text-white mb-2 sm:mb-3">
-                {tech.title}
-              </h3>
-              <p className="text-xs sm:text-sm md:text-base text-primary-foreground/60 leading-relaxed line-clamp-3">
-                {tech.description}
-              </p>
+              <div className="flex flex-col flex-1">
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white mb-3 sm:mb-4">
+                  {tech.title}
+                </h3>
+                <p className="text-sm sm:text-base text-primary-foreground/60 leading-relaxed flex-1">
+                  {tech.description}
+                </p>
+              </div>
             </div>
           ))}
         </StaggeredChildren>
@@ -126,14 +128,10 @@ export function TechnologySection() {
                 <Image
                   src="/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.png"
                   alt="Control de calidad y tecnología industrial"
-                  width={1200}
-                  height={600}
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 1200px"
                   loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                  quality={85}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent" />
                 
