@@ -56,7 +56,7 @@ export default function Home() {
 
   // ✅ useEffect optimizado con throttling para evitar long tasks
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout | null = null
+    let timeoutId: ReturnType<typeof setTimeout> | null = null
 
     const handleScroll = () => {
       // ✅ Throttling para no ejecutar en cada pixel de scroll
@@ -64,8 +64,8 @@ export default function Home() {
 
       timeoutId = setTimeout(() => {
         setShowScrollTop(window.scrollY > 400)
-        timeoutId = null
       }, 100) // 100ms de throttling
+      timeoutId = null
     }
 
     // ✅ Event listener con passive: true para mejor performance

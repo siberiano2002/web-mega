@@ -1,3 +1,5 @@
+"use client"
+
 import { Navigation } from "./navigation"
 import { MobileMenuButton } from "./mobile-menu-button"
 

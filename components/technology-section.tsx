@@ -132,6 +132,7 @@ export function TechnologySection() {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 1200px"
                   loading="lazy"
+                  quality={85}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent" />
                 

@@ -1,0 +1,16 @@
+# Variables de entorno para Sanity CMS
+# Configuración del proyecto MEGA Ingeniería
+
+# Project ID y Dataset (requeridos)
+NEXT_PUBLIC_SANITY_PROJECT_ID=tuexzpcw
+NEXT_PUBLIC_SANITY_DATASET=production
+
+# Token de API (opcional - solo si el dataset es privado)
+# Genera tu token en: https://www.sanity.io/manage
+# Permisos recomendados: Read-only
+SANITY_API_TOKEN=sk_live_XXXXXX
+
+# Nota importante:
+# - Si el dataset es público, puedes comentar o eliminar la línea SANITY_API_TOKEN
+# - Si el dataset es privado, reemplaza XXXXXX con tu token real
+# - Reinicia el servidor después de cambiar estas variables

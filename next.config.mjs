@@ -3,12 +3,16 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // ✅ Configuración de Turbopack para Next.js 16
+  turbopack: {},
   images: {
     // ✅ Sin especificar formats para que Next.js maneje automáticamente
     // Si no existen WebP/AVIF, usará el original (JPG)
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
+    // ✅ Configurar qualities para optimización
+    qualities: [75, 85],
     // ✅ Usar remotePatterns en lugar de domains (deprecated)
     remotePatterns: [
       {
@@ -30,8 +34,21 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'lh3.googleusercontent.com',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        pathname: '/**',
       }
     ],
+  },
+  // ✅ Configurar alias para que @/ apunte a la raíz del proyecto
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': './',
+    }
+    return config
   },
 }
 

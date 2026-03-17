@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    {
+      "source": "/studio/:path*",
+      "destination": "/studio/$path"
+    }
+  ],
+  "functions": {
+    "app/studio/[[...tool]]/route.js": {
+      "maxDuration": 30
+    }
+  }
+}

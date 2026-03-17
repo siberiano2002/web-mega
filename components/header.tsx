@@ -15,7 +15,7 @@ const navigation = [
   { key: "navContacto", href: "#contacto" },
 ]
 
-export function Header() {
+export function Header({ forceDark = false }: { forceDark?: boolean }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("inicio")
@@ -68,7 +68,7 @@ export function Header() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
+        forceDark || scrolled
           ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" 
           : "bg-transparent"
       }`}
@@ -79,13 +79,14 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
               <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
-                scrolled ? "bg-primary text-primary-foreground" : "bg-white/10 backdrop-blur-sm text-white border border-white/20"
+                forceDark || scrolled ? "bg-primary text-primary-foreground" : "bg-white/10 backdrop-blur-sm text-white border border-white/20"
               }`}>
                 <Image 
                   src="/iconomega.png" 
                   alt="MEGA Logo" 
                   width={32} 
                   height={32}
+                  quality={85}
                   sizes="32px"
                   className="transition-transform group-hover:scale-105"
                 />
@@ -93,12 +94,12 @@ export function Header() {
             </div>
             <div className="flex flex-col">
               <span className={`text-xl font-bold tracking-tight transition-colors ${
-                scrolled ? "text-foreground" : "text-white"
+                forceDark || scrolled ? "text-foreground" : "text-white"
               }`}>
                 MEGA
               </span>
               <span className={`text-[10px] uppercase tracking-[0.2em] transition-colors ${
-                scrolled ? "text-muted-foreground" : "text-white/70"
+                forceDark || scrolled ? "text-muted-foreground" : "text-white/70"
               }`}>
                 Ingeniería
               </span>
@@ -113,7 +114,7 @@ export function Header() {
                   key={item.key}
                   href={item.href}
                   className={`px-4 py-2 text-sm font-medium transition-colors rounded-full ${
-                    scrolled
+                    forceDark || scrolled
                       ? "text-foreground/70 hover:text-foreground hover:bg-muted"
                       : "text-white/80 hover:text-white hover:bg-white/10"
                   }`}
@@ -129,12 +130,12 @@ export function Header() {
                     scrollToSection(item.href.replace("#", ""))
                   }}
                   className={`px-4 py-2 text-sm font-medium transition-colors rounded-full ${
-                    scrolled
+                    forceDark || scrolled
                       ? "text-foreground/70 hover:text-foreground hover:bg-muted"
                       : "text-white/80 hover:text-white hover:bg-white/10"
                   } ${
                     activeSection === item.href.replace("#", "")
-                      ? scrolled
+                      ? forceDark || scrolled
                         ? "bg-muted text-foreground"
                         : "bg-white/15 text-white"
                       : ""
@@ -155,7 +156,7 @@ export function Header() {
           <button
             type="button"
             className={`lg:hidden p-2 rounded-full transition-colors ${
-              scrolled 
+              forceDark || scrolled 
                 ? "text-foreground hover:bg-muted" 
                 : "text-white hover:bg-white/10"
             }`}

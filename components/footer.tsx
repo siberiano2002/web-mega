@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
@@ -23,6 +25,7 @@ export function Footer() {
                     alt="MEGA" 
                     width={32} 
                     height={32}
+                    quality={85}
                     sizes="32px"
                     className="transition-transform group-hover:scale-105"
                   />
@@ -86,9 +89,10 @@ export function Footer() {
                   src="/images/logo-adimra2x.png" 
                   alt="ADIMRA" 
                   width={120} 
-                  height={60}
+                  height={120}
+                  quality={75}
                   sizes="120px"
-                  className="object-contain"
+                  className="transition-transform hover:scale-105"
                 />
               </div>
               <div className="flex justify-center">
@@ -97,6 +101,7 @@ export function Footer() {
                   alt="MAGRIBA" 
                   width={120} 
                   height={60}
+                  quality={75}
                   sizes="120px"
                   className="object-contain"
                 />
@@ -107,6 +112,7 @@ export function Footer() {
                   alt="CAFMA" 
                   width={120} 
                   height={60}
+                  quality={75}
                   sizes="120px"
                   className="object-contain"
                 />
@@ -152,8 +158,9 @@ export function Footer() {
                   alt="DATAWEB" 
                   width={80} 
                   height={40}
+                  quality={75}
                   sizes="80px"
-                  className="object-contain"
+                  className="object-contain hover:scale-105 transition-transform"
                 />
               </div>
               <div className="flex justify-center">
@@ -161,9 +168,10 @@ export function Footer() {
                   src="/images/luzbelito.png" 
                   alt="Luzbelito" 
                   width={208} 
-                  height={104}
+                  height={40}
+                  quality={75}
                   sizes="208px"
-                  className="object-contain"
+                  className="object-contain hover:scale-105 transition-transform"
                 />
               </div>
             </div>
