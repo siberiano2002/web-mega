@@ -35,6 +35,14 @@ const InternationalSection = dynamic(
   }
 )
 
+const NewsPreviewSection = dynamic(
+  () => import("@/components/news-preview-section").then(mod => ({ default: mod.NewsPreviewSection })),
+  { 
+    ssr: false,
+    loading: () => <div className="h-96 bg-gray-100 animate-pulse rounded-lg" />
+  }
+)
+
 const ContactSection = dynamic(
   () => import("@/components/contact-section").then(mod => ({ default: mod.ContactSection })),
   { 
@@ -151,6 +159,7 @@ export default function Home() {
         <ServicesSection />
         <TechnologySection />
         <InternationalSection />
+        <NewsPreviewSection />
         <ContactSection />
         <Footer />
         

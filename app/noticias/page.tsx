@@ -170,7 +170,7 @@ export default async function NoticiasPage({
 
               <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="#contacto"
+                  href="/#contacto"
                   className="inline-flex items-center justify-center rounded-full border border-primary-foreground/30 px-6 py-2.5 sm:px-8 sm:py-3 text-sm sm:text-base font-medium text-primary-foreground/80 hover:bg-primary-foreground/10 transition-colors"
                 >
                   Contactar con MEGA
