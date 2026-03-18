@@ -5,6 +5,7 @@ import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, MapPin, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react'
+import { PortableTextImage } from '@/components/sanity-optimized-image'
 
 // Posts por página
 const POSTS_PER_PAGE = 6
@@ -24,20 +25,7 @@ export const PortableTextComponents = {
     ),
   },
   types: {
-    image: ({ value }: any) => (
-      <div className="my-6">
-        <img
-          src={value.asset.url}
-          alt={value.alt || 'Imagen'}
-          className="rounded-lg shadow-md w-full"
-        />
-        {value.caption && (
-          <p className="text-sm text-gray-600 mt-2 text-center italic">
-            {value.caption}
-          </p>
-        )}
-      </div>
-    ),
+    image: PortableTextImage,
   },
   block: {
     h1: ({ children }: any) => <h1 className="text-3xl font-bold mt-8 mb-6 text-gray-900">{children}</h1>,

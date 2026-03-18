@@ -200,7 +200,7 @@ export default function SecadorasPage() {
           {/* Mobile Image - Visible only on small screens */}
           <div className="lg:hidden absolute inset-0">
             <Image
-              src="/images/secadoras5-mobile.jpg"
+              src="/images/secadoras5-mobile.webp"
               alt="Secadoras de granos MEGA en operación - Mobile"
               fill
               className="object-cover"
@@ -212,7 +212,7 @@ export default function SecadorasPage() {
           {/* Tablet Image - Visible only on medium screens */}
           <div className="hidden lg:block xl:hidden absolute inset-0">
             <Image
-              src="/images/secadoras5-tablet.jpg"
+              src="/images/secadoras5-tablet.webp"
               alt="Secadoras de granos MEGA en operación - Tablet"
               fill
               className="object-cover"
@@ -224,7 +224,7 @@ export default function SecadorasPage() {
           {/* Desktop Image - Visible only on large screens */}
           <div className="hidden xl:block absolute inset-0">
             <Image
-              src="/images/secadoras5.jpg"
+              src="/images/secadoras5.webp"
               alt="Secadoras de granos MEGA en operación - Desktop"
               fill
               className="object-cover"
@@ -463,7 +463,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/image_8bf16561.png"
+                      src="/images/secadoras/image_8bf16561.webp"
                       alt="Recorrido del grano en sistema de flujo mixto"
                       fill
                       className="object-contain"
@@ -548,7 +548,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/image_5728765c.png"
+                      src="/images/secadoras/image_5728765c.webp"
                       alt="Sistema de tempering cíclico"
                       fill
                       className="object-contain"
@@ -633,7 +633,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_000_autolimpiante.jpg"
+                      src="/images/secadoras/full_000_autolimpiante.webp"
                       alt="Sistema autolimpiante MEGA"
                       fill
                       className="object-contain"
@@ -718,7 +718,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0003_descarga.jpg"
+                      src="/images/secadoras/full_0003_descarga.webp"
                       alt="Sistema de descarga MEGA"
                       fill
                       className="object-contain"
@@ -803,7 +803,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0002_sistema_modular.jpg"
+                      src="/images/secadoras/full_0002_sistema_modular.webp"
                       alt="Sistema modular MEGA"
                       fill
                       className="object-contain"
@@ -892,7 +892,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0001_montaje.jpg"
+                      src="/images/secadoras/full_0001_montaje.webp"
                       alt="Montaje en obra MEGA"
                       fill
                       className="object-contain"
@@ -973,7 +973,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0009_tablero_digital.jpg"
+                      src="/images/secadoras/full_0009_tablero_digital.webp"
                       alt="Tablero de control digital"
                       fill
                       className="object-contain"
@@ -1058,7 +1058,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0008_Separadores de polvo.jpg"
+                      src="/images/secadoras/full_0008_Separadores de polvo.webp"
                       alt="Separadores de partículas livianas"
                       fill
                       className="object-contain"
@@ -1147,7 +1147,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0007_Aspiracion_secundario_polvo.jpg"
+                      src="/images/secadoras/full_0007_Aspiracion_secundario_polvo.webp"
                       alt="Sistema de aspiración secundaria de polvo"
                       fill
                       className="object-contain"
@@ -1236,7 +1236,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0006_red_incendio.jpg"
+                      src="/images/secadoras/full_0006_red_incendio.webp"
                       alt="Red contra incendios"
                       fill
                       className="object-contain"
@@ -1325,7 +1325,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0005_atenuadores_ruido.jpg"
+                      src="/images/secadoras/full_0005_atenuadores_ruido.webp"
                       alt="Atenuadores de ruido"
                       fill
                       className="object-contain"
@@ -1414,7 +1414,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0004_aire_comprimido.jpg"
+                      src="/images/secadoras/full_0004_aire_comprimido.webp"
                       alt="Sistema de limpieza con aire comprimido"
                       fill
                       className="object-contain"
@@ -1503,7 +1503,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0003_aislacion_termica (1).jpg"
+                      src="/images/secadoras/full_0003_aislacion_termica (1).webp"
                       alt="Aislación térmica"
                       fill
                       className="object-contain"
@@ -1592,7 +1592,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0002_recuperacion_calor (1).jpg"
+                      src="/images/secadoras/full_0002_recuperacion_calor (1).webp"
                       alt="Recuperación de calor"
                       fill
                       className="object-contain"
@@ -1681,7 +1681,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0000_quemador_render.jpg"
+                      src="/images/secadoras/full_0000_quemador_render.webp"
                       alt="Generadores de calor MEGA"
                       fill
                       className="object-contain"
@@ -1766,7 +1766,7 @@ export default function SecadorasPage() {
                 <div className="max-w-2xl mx-auto">
                   <div className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/secadoras/full_0010_TCV.jpg"
+                      src="/images/secadoras/full_0010_TCV.webp"
                       alt="SERIE TC-V"
                       fill
                       className="object-contain"
@@ -1856,7 +1856,7 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/secadoras2.jpg"
+                        src="/images/secadoras/secadoras2.webp"
                         alt="Instalación de secadora MEGA"
                         width={400}
                         height={300}
@@ -1868,7 +1868,7 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/secadoras3.jpg"
+                        src="/images/secadoras/secadoras3.webp"
                         alt="Montaje de secadora modular"
                         width={400}
                         height={300}
@@ -1880,7 +1880,7 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/secadoras4.jpg"
+                        src="/images/secadoras/secadoras4.webp"
                         alt="Planta de secado MEGA"
                         width={400}
                         height={300}
@@ -1892,7 +1892,7 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/secadora-mega-2.jpg"
+                        src="/images/secadoras/secadora-mega-2.webp"
                         alt="Sistema de control digital"
                         width={400}
                         height={300}
@@ -1904,7 +1904,7 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/secadoras6.jpg"
+                        src="/images/secadoras/secadoras6.webp"
                         alt="Instalación industrial completa"
                         width={400}
                         height={300}
@@ -1916,7 +1916,7 @@ export default function SecadorasPage() {
                   <div className="relative group overflow-hidden rounded-2xl">
                     <div className="max-w-2xl mx-auto lg:w-full">
                       <Image
-                        src="/images/secadoras/full_0001_montaje.jpg"
+                        src="/images/secadoras/full_0001_montaje.webp"
                         alt="Proceso de montaje en obra"
                         width={400}
                         height={300}

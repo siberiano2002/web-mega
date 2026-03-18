@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { SanityOptimizedImage, PortableTextImage } from '@/components/sanity-optimized-image'
 
 // Query GROQ para obtener un post específico
 const postQuery = `*[_type == "post" && slug.current == $slug][0]{
@@ -172,16 +173,18 @@ export default async function PostPage(
               </div>
 
               {/* Imagen principal */}
-              {post.mainImage?.asset?.url && (
+              {post.mainImage && (
                 <div className="mb-8 sm:mb-12">
                   <div className="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <Image
-                      src={post.mainImage.asset.url}
+                    <SanityOptimizedImage
+                      image={post.mainImage}
                       alt={post.title}
                       width={1200}
                       height={600}
+                      priority={true}
                       className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                      quality={85}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -209,20 +212,7 @@ export default async function PostPage(
                           ),
                         },
                         types: {
-                          image: ({ value }: any) => (
-                            <div className="my-6 sm:my-8">
-                              <img
-                                src={value.asset.url}
-                                alt={value.alt || 'Imagen'}
-                                className="rounded-lg shadow-md w-full h-auto"
-                              />
-                              {value.caption && (
-                                <p className="text-xs sm:text-sm text-gray-600 mt-2 text-center italic">
-                                  {value.caption}
-                                </p>
-                              )}
-                            </div>
-                          ),
+                          image: PortableTextImage,
                         },
                         block: {
                           h1: ({ children }: any) => <h1 className="text-2xl sm:text-3xl font-bold mt-6 sm:mt-8 mb-4 sm:mb-6 text-gray-900">{children}</h1>,

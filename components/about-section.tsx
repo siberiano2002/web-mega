@@ -62,7 +62,7 @@ export function AboutSection() {
                 {/* Image */}
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/engineering-team.jpg"
+                    src="/images/engineering-team.webp"
                     alt={`INGENIERÍA MEGA - ${section.title}`}
                     fill
                     className="object-cover"

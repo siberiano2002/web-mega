@@ -81,7 +81,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-accent flex items-center justify-center transition-transform group-hover:scale-105">
               <Image 
-                src="/iconomega.png" 
+                src="/iconomega.webp" 
                 alt="MEGA" 
                 width={32} 
                 height={32}

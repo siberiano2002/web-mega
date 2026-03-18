@@ -8,7 +8,7 @@ const products = [
     id: 1,
     title: "Secadoras de Granos MEGA",
     description: "Sistemas de secado de alta eficiencia con tecnología de vanguardia para optimizar la calidad y rendimiento de sus granos.",
-    image: "/images/secadoras6.jpg",
+    image: "/images/secadoras6.webp",
     features: ["Capacidad 50-500 tn/día", "Eficiencia térmica hasta 92%", "Control automatizado PLC", "Monitoreo remoto IoT"]
   },
   {
@@ -22,7 +22,7 @@ const products = [
     id: 3,
     title: "Energías Renovables",
     description: "Soluciones sostenibles con biomasa y energía solar para reducir costos y huella de carbono.",
-    image: "/images/renewable-energy.jpg",
+    image: "/images/renewable-energy.webp",
     features: ["Sistemas de biomasa", "Paneles solares", "Hibridación energética", "Monitorización en tiempo real"]
   },
   {

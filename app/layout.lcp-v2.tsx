@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   description: 'Especialistas en sistemas de secado de granos, energías renovables y soluciones de gas. Más de 30 años de experiencia en ingeniería industrial en Argentina.',
   generator: 'v0.app',
   icons: {
-    icon: '/iconomega.png',
-    apple: '/iconomega.png',
+    icon: '/iconomega.webp',
+    apple: '/iconomega.webp',
   },
 }
 
@@ -44,7 +44,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/secadoras5.jpg"
+          href="/images/secadoras5.webp"
           imageSrcSet="/images/secadoras5-mobile.jpg 768w, /images/secadoras5-tablet.jpg 1024w, /images/secadoras5.jpg 1920w"
           imageSizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 1920px"
         />

@@ -152,15 +152,15 @@ export default function RenovablesPage() {
         <div className="absolute inset-0">
           <picture>
             <source
-              srcSet="/images/slide-energias-renovables-mobile.jpg"
+              srcSet="/images/slide-energias-renovables-mobile.webp"
               media="(max-width: 640px)"
             />
             <source
-              srcSet="/images/slide-energias-renovables-tablet.jpg"
+              srcSet="/images/slide-energias-renovables-tablet.webp"
               media="(min-width: 641px) and (max-width: 1024px)"
             />
             <Image
-              src="/images/slide-energias-renovables.jpg"
+              src="/images/slide-energias-renovables.webp"
               alt="Energías renovables MEGA - hornos de biomasa y paneles solares"
               fill
               className="object-cover"
@@ -803,7 +803,7 @@ export default function RenovablesPage() {
                 <h3 className="text-lg font-semibold text-foreground">Parque Solar Fotovoltaico</h3>
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/energias-renovables/parquesfotovoitaicos.png"
+                    src="/images/energias-renovables/parquesfotovoitaicos.webp"
                     alt="Parque Solar Fotovoltaico Ingeniería Mega"
                     fill
                     className="object-cover"
@@ -853,7 +853,7 @@ export default function RenovablesPage() {
                 <div className="bg-card rounded-3xl p-8 border border-border">
                   <div className="relative w-full h-40 rounded-t-2xl object-cover mb-4">
                     <Image
-                      src="/images/energias-renovables/choclo.jpg"
+                      src="/images/energias-renovables/choclo.webp"
                       alt="Biomasa no particulada - Leña y marlos de maíz"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
@@ -884,7 +884,7 @@ export default function RenovablesPage() {
                 <div className="bg-card rounded-3xl p-8 border border-border">
                   <div className="relative w-full h-40 rounded-t-2xl object-cover mb-4">
                     <Image
-                      src="/images/energias-renovables/arroz.jpg"
+                      src="/images/energias-renovables/arroz.webp"
                       alt="Biomasa particulada - Cáscaras de arroz y residuos finos"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
@@ -1003,7 +1003,7 @@ export default function RenovablesPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/1.jpg"
+                      src="/images/energias-renovables/1.webp"
                       alt="Generador de aire caliente - Imagen 1"
                       fill
                       className="object-contain"
@@ -1011,7 +1011,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/2.jpg"
+                      src="/images/energias-renovables/2.webp"
                       alt="Generador de aire caliente - Imagen 2"
                       fill
                       className="object-contain"
@@ -1019,7 +1019,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/3.jpg"
+                      src="/images/energias-renovables/3.webp"
                       alt="Generador de aire caliente - Imagen 3"
                       fill
                       className="object-contain"
@@ -1111,7 +1111,7 @@ export default function RenovablesPage() {
                 <h3 className="text-lg font-semibold text-foreground">Silo de Almacenamiento</h3>
                 <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/energias-renovables/Silo-Biomasa.jpg"
+                    src="/images/energias-renovables/Silo-Biomasa.webp"
                     alt="Silo de almacenamiento de biomasa"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
@@ -1204,7 +1204,7 @@ export default function RenovablesPage() {
                   <div className="grid grid-cols-2 gap-2 h-full">
                     <div className="relative flex-1">
                       <Image
-                        src="/images/energias-renovables/Cinta-transportadora.jpg"
+                        src="/images/energias-renovables/Cinta-transportadora.webp"
                         alt="Sistema de alimentación de biomasa - Cinta transportadora"
                         fill
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 600px"
@@ -1216,7 +1216,7 @@ export default function RenovablesPage() {
                     </div>
                     <div className="relative flex-1">
                       <Image
-                        src="/images/energias-renovables/chimango.jpg"
+                        src="/images/energias-renovables/chimango.webp"
                         alt="Sistema de alimentación de biomasa - Chimango"
                         fill
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 600px"
@@ -1321,7 +1321,7 @@ export default function RenovablesPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/1.jpg"
+                      src="/images/energias-renovables/1.webp"
                       alt="Generador de aire caliente - Imagen 1"
                       fill
                       className="object-contain"
@@ -1329,7 +1329,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/2.jpg"
+                      src="/images/energias-renovables/2.webp"
                       alt="Generador de aire caliente - Imagen 2"
                       fill
                       className="object-contain"
@@ -1337,7 +1337,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/3.jpg"
+                      src="/images/energias-renovables/3.webp"
                       alt="Generador de aire caliente - Imagen 3"
                       fill
                       className="object-contain"
@@ -1432,7 +1432,7 @@ export default function RenovablesPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/QPI-24.jpg"
+                      src="/images/energias-renovables/QPI-24.webp"
                       alt="Modelo QPI (Biomasa particulada)"
                       fill
                       className="object-contain"
@@ -1443,7 +1443,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/QC-16.jpg"
+                      src="/images/energias-renovables/QC-16.webp"
                       alt="Modelo QC (Biomasa no particulada)"
                       fill
                       className="object-contain"
@@ -1454,7 +1454,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/cenizas-05.jpg"
+                      src="/images/energias-renovables/cenizas-05.webp"
                       alt="DESCARGA DE CENIZAS"
                       fill
                       className="object-contain"
@@ -1552,7 +1552,7 @@ export default function RenovablesPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/venturi.jpg"
+                      src="/images/energias-renovables/venturi.webp"
                       alt="VENTURI"
                       fill
                       className="object-cover"
@@ -1563,7 +1563,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/intercambiador.jpg"
+                      src="/images/energias-renovables/intercambiador.webp"
                       alt="INTERCAMBIADOR DE CALOR"
                       fill
                       className="object-cover"
@@ -1574,7 +1574,7 @@ export default function RenovablesPage() {
                   </div>
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-slate-50 p-1">
                     <Image
-                      src="/images/energias-renovables/eductor.jpg"
+                      src="/images/energias-renovables/eductor.webp"
                       alt="EDUCTOR CICLÓNICO"
                       fill
                       className="object-cover"

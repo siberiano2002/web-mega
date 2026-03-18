@@ -36,11 +36,11 @@ export function HeroSection() {
   const getHeroImage = () => {
     switch (screenSize) {
       case 'mobile':
-        return '/images/secadoras5-mobile.jpg'
+        return '/images/secadoras5-mobile.webp'
       case 'tablet':
-        return '/images/secadoras5-tablet.jpg'
+        return '/images/secadoras5-tablet.webp'
       default:
-        return '/images/secadoras5.jpg'
+        return '/images/secadoras5.webp'
     }
   }
 

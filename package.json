@@ -6,7 +6,13 @@
     "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "convert:webp": "node scripts/convert-to-webp.js",
+    "convert:webp:sharp": "node scripts/convert-to-webp-sharp.js",
+    "convert:webp:check": "node -e \"const { findImagesToConvert } = require('./scripts/convert-to-webp-sharp.js'); const images = findImagesToConvert('./public/images'); console.log('📊 Imágenes para convertir: ' + images.length); images.forEach(img => console.log('  - ' + img.relative));\"",
+    "convert:webp:update": "node -e \"const { updateCodePaths } = require('./scripts/convert-to-webp-sharp.js'); updateCodePaths();\"",
+    "fix:webp": "node scripts/fix-webp-routes.js",
+    "fix:webp:check": "node -e \"const { findWebpRoutes } = require('./scripts/fix-webp-routes.js'); const routes = findWebpRoutes('./components'); const missing = routes.filter(r => !r.exists); console.log('📊 Rutas WebP faltantes: ' + missing.length); missing.forEach(r => console.log('  - ' + r.route + ' (' + r.relative + ')'));\""
   },
   "dependencies": {
     "@portabletext/react": "^6.0.3",
@@ -56,6 +62,7 @@
     "react-resizable-panels": "^2.1.7",
     "react-simple-maps": "^3.0.0",
     "sanity": "^5.16.0",
+    "sharp": "^0.34.5",
     "sonner": "^1.7.1",
     "styled-components": "^6.3.11",
     "tailwind-merge": "^3.3.1",

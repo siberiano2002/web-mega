@@ -21,7 +21,7 @@ const caseStudies = [
     testimonial: "MEGA transformó completamente nuestra operación. El retorno de inversión fue menor a 18 meses.",
     author: "Carlos Rodríguez",
     role: "Director de Operaciones",
-    image: "/images/slide-secadoras.jpg",
+    image: "/images/slide-secadoras.webp",
     url: "/secadoras",
   },
   {
@@ -38,7 +38,7 @@ const caseStudies = [
     testimonial: "Gracias a MEGA somos la primera cooperativa de la región en lograr la neutralidad de carbono.",
     author: "María Fernández",
     role: "Presidenta",
-    image: "/images/educacionyempresas.jpg",
+    image: "/images/educacionyempresas.webp",
     url: "/energias-renovables#biomasa",
   },
   {
@@ -55,7 +55,7 @@ const caseStudies = [
     testimonial: "La planificación y ejecución de MEGA fue impecable. Nunca perdimos un día de producción.",
     author: "Roberto García",
     role: "Gerente de Planta",
-    image: "/images/slide-gas.jpg",
+    image: "/images/slide-gas.webp",
     url: "/gas",
   },
   {

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: 'Especialistas en sistemas de secado de granos, energías renovables y soluciones de gas. Más de 30 años de experiencia en ingeniería industrial en Argentina.',
   generator: 'v0.app',
   icons: {
-    icon: '/iconomega.png',
-    apple: '/iconomega.png',
+    icon: '/iconomega.webp',
+    apple: '/iconomega.webp',
   },
   // Preconexiones para LCP
   other: {
@@ -46,7 +46,7 @@ export default function RootLayout({
         {/* Preload de imágenes críticas */}
         <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
         <link rel="preload" href="/images/Ingenieria-MEGA.webp" as="image" type="image/webp" />
-        <link rel="preload" href="/iconomega.png" as="image" type="image/png" />
+        <link rel="preload" href="/iconomega.webp" as="image" type="image/png" />
         
         {/* Preload de recursos importantes */}
         <link rel="preload" href="/_next/static/css/main.css" as="style" />

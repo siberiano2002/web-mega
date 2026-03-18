@@ -14,9 +14,9 @@ const stats = [
 
 // ✅ Optimización: Memoizar configuración de imágenes
 const imageConfig = {
-  mobile: { src: '/images/secadoras5-mobile.jpg', width: 768, height: 1024 },
-  tablet: { src: '/images/secadoras5-tablet.jpg', width: 1024, height: 768 },
-  desktop: { src: '/images/secadoras5.jpg', width: 1920, height: 1080 }
+  mobile: { src: '/images/secadoras5-mobile.webp', width: 768, height: 1024 },
+  tablet: { src: '/images/secadoras5-tablet.webp', width: 1024, height: 768 },
+  desktop: { src: '/images/secadoras5.webp', width: 1920, height: 1080 }
 }
 
 // ✅ Optimización: Memoizar placeholder para evitar generar strings repetidamente

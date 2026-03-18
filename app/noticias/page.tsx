@@ -116,7 +116,7 @@ export default async function NoticiasPage({
             {/* Mobile Image - hasta 768px */}
             <div className="md:hidden absolute inset-0">
               <Image
-                src="/images/36edfbc7-63ce-4178-9fd4-b26413346b98.png"
+                src="/images/36edfbc7-63ce-4178-9fd4-b26413346b98.webp"
                 alt="Noticias y Novedades MEGA - Mobile"
                 fill
                 className="object-cover"
@@ -128,7 +128,7 @@ export default async function NoticiasPage({
             {/* Tablet Image - 768px a 1024px */}
             <div className="hidden md:block lg:hidden absolute inset-0">
               <Image
-                src="/images/36edfbc7-63ce-4178-9fd4-b26413346b98.png"
+                src="/images/36edfbc7-63ce-4178-9fd4-b26413346b98.webp"
                 alt="Noticias y Novedades MEGA - Tablet"
                 fill
                 className="object-cover"
@@ -140,7 +140,7 @@ export default async function NoticiasPage({
             {/* Desktop Image - más de 1024px */}
             <div className="hidden lg:block absolute inset-0">
               <Image
-                src="/images/36edfbc7-63ce-4178-9fd4-b26413346b98.png"
+                src="/images/36edfbc7-63ce-4178-9fd4-b26413346b98.webp"
                 alt="Noticias y Novedades MEGA - Desktop"
                 fill
                 className="object-cover"

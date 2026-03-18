@@ -82,7 +82,7 @@ export function Header({ forceDark = false }: { forceDark?: boolean }) {
                 forceDark || scrolled ? "bg-primary text-primary-foreground" : "bg-white/10 backdrop-blur-sm text-white border border-white/20"
               }`}>
                 <Image 
-                  src="/iconomega.png" 
+                  src="/iconomega.webp" 
                   alt="MEGA Logo" 
                   width={32} 
                   height={32}

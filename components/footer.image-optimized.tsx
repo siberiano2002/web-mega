@@ -39,9 +39,9 @@ const socialLinks = [
 ]
 
 const certifications = [
-  { name: "ADIMRA", logo: "/images/logo-adimra2x.webp", fallback: "/images/logo-adimra2x.png", alt: "ADIMRA - Asociación de Industriales Metalúrgicas de la República Argentina" },
-  { name: "MAGRIBA", logo: "/images/logo-magriba.webp", fallback: "/images/logo-magriba.png", alt: "MAGRIBA - Asociación de Fabricantes de Equipos de Granos y Afines" },
-  { name: "CAFMA", logo: "/images/logo-cafma.webp", fallback: "/images/logo-cafma.png", alt: "CAFMA - Cámara Argentina de Fabricantes de Maquinaria Agrícola" },
+  { name: "ADIMRA", logo: "/images/logo-adimra2x.webp", fallback: "/images/logo-adimra2x.webp", alt: "ADIMRA - Asociación de Industriales Metalúrgicas de la República Argentina" },
+  { name: "MAGRIBA", logo: "/images/logo-magriba.webp", fallback: "/images/logo-magriba.webp", alt: "MAGRIBA - Asociación de Fabricantes de Equipos de Granos y Afines" },
+  { name: "CAFMA", logo: "/images/logo-cafma.webp", fallback: "/images/logo-cafma.webp", alt: "CAFMA - Cámara Argentina de Fabricantes de Maquinaria Agrícola" },
 ]
 
 export function FooterImageOptimized() {
@@ -56,7 +56,7 @@ export function FooterImageOptimized() {
                 <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center transition-transform group-hover:scale-105">
                   <LogoImage 
                     src="/iconomega.webp" 
-                    fallback="/iconomega.png"
+                    fallback="/iconomega.webp"
                     alt="MEGA" 
                     size={48}
                     className="transition-transform group-hover:scale-105"

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Calendar, ArrowRight } from "lucide-react"
 import { client } from "@/sanity/lib/client"
+import { Button } from "@/components/ui/button"
 
 interface Post {
   _id: string
@@ -93,9 +94,9 @@ export function NewsPreviewSection() {
         {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {posts.map((post) => (
-            <article key={post._id} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group">
+            <article key={post._id} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group flex flex-col h-full">
               {/* Content */}
-              <div className="p-6 space-y-4">
+              <div className="p-6 space-y-4 flex flex-col flex-1">
                 {/* Date */}
                 {post.publishedAt && (
                   <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -111,26 +112,28 @@ export function NewsPreviewSection() {
                 )}
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 leading-tight line-clamp-2">
+                <h3 className="text-xl font-bold text-gray-900 leading-tight line-clamp-2 flex-1">
                   {post.title}
                 </h3>
 
                 {/* Excerpt */}
                 {post.excerpt && (
-                  <p className="text-gray-600 leading-relaxed line-clamp-3">
+                  <p className="text-gray-600 leading-relaxed line-clamp-4">
                     {post.excerpt}
                   </p>
                 )}
 
                 {/* Read More Link */}
-                <div className="pt-2">
-                  <Link
-                    href={`/noticias/${post.slug.current}`}
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors group-hover:gap-3"
+                <div className="pt-2 mt-auto">
+                  <Button 
+                    asChild
+                    className="w-full h-9 sm:h-10 lg:h-11 bg-accent text-accent-foreground hover:bg-accent/90 rounded-lg text-sm sm:text-base font-semibold"
                   >
-                    Leer más
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                    <Link href={`/noticias/${post.slug.current}`}>
+                      Leer más
+                      <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </article>
@@ -139,13 +142,15 @@ export function NewsPreviewSection() {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Link
-            href="/noticias"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 group"
+          <Button 
+            asChild
+            className="h-9 sm:h-10 lg:h-11 bg-accent text-accent-foreground hover:bg-accent/90 rounded-lg text-sm sm:text-base font-semibold"
           >
-            Ver más noticias
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Link>
+            <Link href="/noticias">
+              Ver más noticias
+              <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

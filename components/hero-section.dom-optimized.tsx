@@ -9,7 +9,7 @@ function HeroBackground() {
   return (
     <div className="absolute inset-0">
       <Image
-        src="/images/secadoras5.jpg"
+        src="/images/secadoras5.webp"
         alt="Ingeniería MEGA S.A. - Soluciones industriales integrales"
         width={1920}
         height={1080}

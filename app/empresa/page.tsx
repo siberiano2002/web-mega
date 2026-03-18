@@ -12,22 +12,22 @@ const sections = [
   {
     title: "HISTORIA",
     content: "Ingeniería Mega S.A. nace en el 1995, del trabajo en equipo de dos ingenieros en la ejecución de obras de MECÁNICA (transformación de secadoras), ELECTRICIDAD (obras industriales y hospitalarias) y GAS (instalaciones de redes, GLP).\n\nEn los años 1996/97 se inicia un nuevo capítulo en la empresa con el desarrollo de un nuevo sistema de secadoras de granos que surgió de la experiencia adquirida durante el trabajo en una fábrica local junto con el diseño y aplicación de reformas en los sistemas de combustión de diesel a gas que optimizó la eficiencia de equipos de diferentes marcas y sistemas de secado.\n\nEn diciembre de 1997, se instaló la primera secadora MEGA en la planta de acopio de la empresa Nidera en la localidad de Bayauca, partido de Lincoln.\n\nEn el período 2000/2001 se radicó la fábrica en el parque industrial de Lincoln, provincia de Buenos Aires. Desde 2003 Ingeniería Mega trabaja en el área de Energías Renovables, diseñando y fabricando equipos para quema de biomasa. Los mismos pueden usarse para distintas operaciones.",
-    image: "/images/secadoras6.jpg"
+    image: "/images/secadoras6.webp"
   },
   {
     title: "MISIÓN Y VISIÓN",
     content: "Misión:\nCreamos e implementamos soluciones con la más alta tecnología de secado de granos y acompañamos a nuestros clientes para que obtengan de ellas su máximo potencial.\n\n\n\nVisión:\nSer líderes globales en mercados claves en el diseño e implementación de soluciones de secado para la post cosecha, reconocidos por brindar la más alta tecnología del mercado y acompañamiento al cliente.",
-    image: "/images/engineering-team.jpg"
+    image: "/images/engineering-team.webp"
   },
   {
     title: "VALORES",
     content: "Integridad en todas nuestras operaciones y relaciones comerciales. Equipo de profesionales comprometidos con la excelencia. Sostenibilidad con soluciones que respetan el medio ambiente. Innovación constante para ofrecer tecnología de vanguardia.",
-    image: "/images/equipo.png"
+    image: "/images/equipo.webp"
   },
   {
     title: "COMERCIO EXTERIOR",
     content: "Ingeniería Mega S.A. vende el sistema de secado de granos MEGA, a más de 30 países.\n\nNuestra oficina de comercio exterior conoce los diferentes mercados: sus normativas legales, idiosincrasias, requerimientos, etc..\n\nGracias al esfuerzo de un grupo de trabajo, respaldado por las certificaciones obtenidas, ha llegado a destinos tan diversos como Uruguay, Brasil, Bolivia, Paraguay, Chile, Perú, Ecuador, Colombia, Venezuela, México, Honduras, El Salvador, Nicaragua, Panamá, República Dominicana, Estados Unidos, España, Francia, Bielorrusia, Hungría, Ucrania, Rusia, Rumania, Indonesia, Bangladesh, Turquía, Kazajstán, Angola.",
-    image: "/images/historia-04.png"
+    image: "/images/historia-04.webp"
   }
 ]
 
@@ -68,7 +68,7 @@ export default function HistoriaPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/secadoras5.jpg"
+            src="/images/secadoras5.webp"
             alt="Ingeniería MEGA - Historia y Valores"
             fill
             className="object-cover"

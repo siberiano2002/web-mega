@@ -99,7 +99,7 @@ export default function Home() {
         <link
           rel="preload"
           as="image"
-          href="/images/secadoras5.jpg"
+          href="/images/secadoras5.webp"
           imageSrcSet="/images/secadoras5.webp 1920w, /images/secadoras5-tablet.webp 1024w, /images/secadoras5-mobile.webp 768w"
           imageSizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 1920px"
         />

@@ -21,7 +21,7 @@ export function Footer() {
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center transition-transform group-hover:scale-105">
                   <Image 
-                    src="/iconomega.png" 
+                    src="/iconomega.webp" 
                     alt="MEGA" 
                     width={32} 
                     height={32}
@@ -86,7 +86,7 @@ export function Footer() {
             <div className="grid grid-cols-1 gap-2">
               <div className="flex justify-center">
                 <Image 
-                  src="/images/logo-adimra2x.png" 
+                  src="/images/logo-adimra2x.webp" 
                   alt="ADIMRA" 
                   width={120} 
                   height={120}
@@ -97,7 +97,7 @@ export function Footer() {
               </div>
               <div className="flex justify-center">
                 <Image 
-                  src="/images/logo-magriba.png" 
+                  src="/images/logo-magriba.webp" 
                   alt="MAGRIBA" 
                   width={120} 
                   height={60}
@@ -108,7 +108,7 @@ export function Footer() {
               </div>
               <div className="flex justify-center">
                 <Image 
-                  src="/images/logo-cafma.png" 
+                  src="/images/logo-cafma.webp" 
                   alt="CAFMA" 
                   width={120} 
                   height={60}
@@ -154,7 +154,7 @@ export function Footer() {
             <div className="flex flex-row gap-4 justify-center items-center">
               <div className="flex justify-center">
                 <Image 
-                  src="/images/DATAWEB-on.jpg" 
+                  src="/images/DATAWEB-on.webp" 
                   alt="DATAWEB" 
                   width={80} 
                   height={40}
@@ -165,7 +165,7 @@ export function Footer() {
               </div>
               <div className="flex justify-center">
                 <Image 
-                  src="/images/luzbelito.png" 
+                  src="/images/luzbelito.webp" 
                   alt="Luzbelito" 
                   width={208} 
                   height={40}

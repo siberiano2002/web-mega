@@ -12,7 +12,7 @@ const products = [
     title: "Secadoras de Granos MEGA",
     description: "Sistemas de secado de alta eficiencia con tecnología de vanguardia para optimizar la calidad y rendimiento de sus granos.",
     image: "/images/Ingeniaria-MEGA-secadora-de-granos.webp",
-    fallback: "/images/Ingeniaria-MEGA-secadora-de-granos.jpg",
+    fallback: "/images/Ingeniaria-MEGA-secadora-de-granos.webp",
     features: ["Capacidad 50-500 tn/día", "Eficiencia térmica hasta 92%", "Control automatizado PLC", "Monitoreo remoto IoT"]
   },
   {
@@ -20,7 +20,7 @@ const products = [
     title: "Infraestructura de Gas",
     description: "Proyectos completos de redes de gas natural, GLP y gas industrial con estándares internacionales de seguridad.",
     image: "/images/Ingeniaria-MEGA-gas.webp",
-    fallback: "/images/Ingeniaria-MEGA-gas.jpg",
+    fallback: "/images/Ingeniaria-MEGA-gas.webp",
     features: ["Redes de distribución", "Estaciones de regulación", "Sistemas de seguridad", "Mantenimiento predictivo"]
   },
   {
@@ -28,7 +28,7 @@ const products = [
     title: "Energías Renovables",
     description: "Soluciones sostenibles con biomasa y energía solar para reducir costos y huella de carbono.",
     image: "/images/Ingeniaria-MEGA-energias-renovables.webp",
-    fallback: "/images/Ingeniaria-MEGA-energias-renovables.jpg",
+    fallback: "/images/Ingeniaria-MEGA-energias-renovables.webp",
     features: ["Sistemas de biomasa", "Paneles solares", "Hibridación energética", "Monitorización en tiempo real"]
   },
   {
@@ -36,7 +36,7 @@ const products = [
     title: "Automatización Industrial",
     description: "Sistemas de control y automatización para maximizar la eficiencia y seguridad de sus procesos industriales.",
     image: "/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.webp",
-    fallback: "/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.png",
+    fallback: "/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.webp",
     features: ["Control PLC", "SCADA/HMI", "Integración de sistemas", "Análisis de datos"]
   }
 ]

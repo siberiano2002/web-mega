@@ -34,7 +34,7 @@ export default function SecadorasPage() {
           {/* Mobile Image */}
           <div className="lg:hidden absolute inset-0">
             <OptimizedImage
-              src="/images/secadoras5-mobile.jpg"
+              src="/images/secadoras5-mobile.webp"
               alt="Secadoras de granos MEGA en operación - Mobile"
               className="object-cover"
               sizes="100vw"
@@ -46,7 +46,7 @@ export default function SecadorasPage() {
           {/* Tablet Image */}
           <div className="hidden lg:block xl:hidden absolute inset-0">
             <OptimizedImage
-              src="/images/secadoras5-tablet.jpg"
+              src="/images/secadoras5-tablet.webp"
               alt="Secadoras de granos MEGA en operación - Tablet"
               className="object-cover"
               sizes="100vw"
@@ -58,7 +58,7 @@ export default function SecadorasPage() {
           {/* Desktop Image */}
           <div className="hidden xl:block absolute inset-0">
             <OptimizedImage
-              src="/images/secadoras5.jpg"
+              src="/images/secadoras5.webp"
               alt="Secadoras de granos MEGA en operación - Desktop"
               className="object-cover"
               sizes="100vw"
@@ -172,12 +172,12 @@ export default function SecadorasPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "/images/592471de85052_20160829174057.jpg",
-              "/images/5924733dda5a7_20160831TMSASimersExpointerfotoNiltonSantolinIMG6852.jpg",
-              "/images/59d4f254b20b6_IMG20150221102103.jpg",
-              "/images/5a3a5d3f32ffd_BICEFINANCIACION2017.jpg",
-              "/images/6708074350c14_IMG20241004125700.jpg",
-              "/images/964cce36-a5c4-48a9-9a72-0ab973046f7e.png"
+              "/images/592471de85052_20160829174057.webp",
+              "/images/5924733dda5a7_20160831TMSASimersExpointerfotoNiltonSantolinIMG6852.webp",
+              "/images/59d4f254b20b6_IMG20150221102103.webp",
+              "/images/5a3a5d3f32ffd_BICEFINANCIACION2017.webp",
+              "/images/6708074350c14_IMG20241004125700.webp",
+              "/images/964cce36-a5c4-48a9-9a72-0ab973046f7e.webp"
             ].map((image, index) => (
               <div key={index} className="group relative overflow-hidden rounded-xl">
                 <OptimizedImage

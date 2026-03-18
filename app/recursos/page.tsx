@@ -18,7 +18,7 @@ const sections = [
   {
     title: "RECURSOS TÉCNICOS",
     content: "Ingeniería Mega S.A. cuenta con modernas Máquinas Herramientas (máquinas de corte láser, punzonadoras, plegadoras con CNC, robots), programas CAD - Computer-Aided Design - para diseños en 3D y 2D (AutoCAD - Inventor), programa CAM - Computer-Aided Manufacturing – para fabricación (RADAN) y un sistema ERP- Enterprise Resource Planning – para gestión (SIFAB) que permite instrumentar los avances tecnológicos.",
-    image: "/images/MEGA440.jpg"
+    image: "/images/MEGA440.webp"
   },
   {
     title: "RECURSOS HUMANOS",
@@ -69,7 +69,7 @@ export default function RecursosPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/engineering-team.jpg"
+            src="/images/engineering-team.webp"
             alt="Ingeniería MEGA - Recursos"
             fill
             className="object-cover"
@@ -178,7 +178,7 @@ export default function RecursosPage() {
               <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
                 <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/valfio2.png"
+                    src="/images/valfio2.webp"
                     alt="INGENIERÍA MEGA - Política - Imagen 1"
                     fill
                     className="object-contain"
@@ -187,7 +187,7 @@ export default function RecursosPage() {
                 </div>
                 <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/lomba3.png"
+                    src="/images/lomba3.webp"
                     alt="INGENIERÍA MEGA - Política - Imagen 2"
                     fill
                     className="object-contain"
@@ -220,7 +220,7 @@ En MEGA nos comprometemos a aplicar los siguientes puntos en la investigación, 
 7 - La implementación, gestión y actualización de nuestro Sistema de Gestión Integrado para mejorar los procesos alcanzados por esta política, y fortalecerlo, volviéndolo más maduro, confiable y respaldatorio.
 
 Esta política será difundida en todos los niveles de la organización, estará disponible a todas las partes interesadas y será revisada periódicamente para asegurar su adecuación.`,
-                    image: "/images/valfio2.png"
+                    image: "/images/valfio2.webp"
                   })}
                   className="px-8 py-4 bg-accent text-accent-foreground rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 >

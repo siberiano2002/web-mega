@@ -14,19 +14,19 @@ const stats = [
 // ✅ LCP Optimized: Configuración de imágenes responsive con tamaños específicos
 const LCP_IMAGE_CONFIG = {
   mobile: { 
-    src: '/images/secadoras5-mobile.jpg', 
+    src: '/images/secadoras5-mobile.webp', 
     width: 768, 
     height: 1024,
     sizes: '100vw'
   },
   tablet: { 
-    src: '/images/secadoras5-tablet.jpg', 
+    src: '/images/secadoras5-tablet.webp', 
     width: 1024, 
     height: 768,
     sizes: '100vw'
   },
   desktop: { 
-    src: '/images/secadoras5.jpg', 
+    src: '/images/secadoras5.webp', 
     width: 1920, 
     height: 1080,
     sizes: '(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 1920px'

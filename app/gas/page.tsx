@@ -87,15 +87,15 @@ export default function GasPage() {
           <div className="absolute inset-0">
             <picture>
               <source
-                srcSet="/images/slide-gas-mobile.jpg"
+                srcSet="/images/slide-gas-mobile.webp"
                 media="(max-width: 640px)"
               />
               <source
-                srcSet="/images/slide-gas-tablet.jpg"
+                srcSet="/images/slide-gas-tablet.webp"
                 media="(min-width: 641px) and (max-width: 1024px)"
               />
               <Image
-                src="/images/slide-gas.jpg"
+                src="/images/slide-gas.webp"
                 alt="División Gas MEGA - redes, gasoductos y plantas GLP"
                 fill
                 className="object-cover bg-muted/50"
@@ -496,7 +496,7 @@ export default function GasPage() {
               {/* Image */}
               <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/gas/4e301881-b210-4bdd-a59f-a7c379111652.png"
+                  src="/images/gas/4e301881-b210-4bdd-a59f-a7c379111652.webp"
                   alt="División Gas MEGA - soluciones integrales de gas natural y GLP"
                   fill
                   className="object-cover"
@@ -606,7 +606,7 @@ export default function GasPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/4.jpg"
+                      src="/images/gas/4.webp"
                       alt="Planta de GLP MEGA - Imagen 4"
                       fill
                       className="object-cover"
@@ -615,7 +615,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/2.jpg"
+                      src="/images/gas/2.webp"
                       alt="Planta de GLP MEGA - Imagen 2"
                       fill
                       className="object-cover"
@@ -624,7 +624,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/1.jpg"
+                      src="/images/gas/1.webp"
                       alt="Planta de GLP MEGA - Imagen 1"
                       fill
                       className="object-cover"
@@ -724,7 +724,7 @@ export default function GasPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/d.jpg"
+                      src="/images/gas/d.webp"
                       alt="Planta de regulación y medición de gas MEGA - Imagen 1"
                       fill
                       className="object-cover"
@@ -733,7 +733,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/e.jpg"
+                      src="/images/gas/e.webp"
                       alt="Planta de regulación y medición de gas MEGA - Imagen 2"
                       fill
                       className="object-cover"
@@ -742,7 +742,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/3.jpg"
+                      src="/images/gas/3.webp"
                       alt="Planta de regulación y medición de gas MEGA - Imagen 3"
                       fill
                       className="object-cover"
@@ -846,7 +846,7 @@ export default function GasPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/f.jpg"
+                      src="/images/gas/f.webp"
                       alt="Gasoducto y ramal MEGA - Imagen 1"
                       fill
                       className="object-cover"
@@ -855,7 +855,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/g.jpg"
+                      src="/images/gas/g.webp"
                       alt="Gasoducto y ramal MEGA - Imagen 2"
                       fill
                       className="object-cover"
@@ -864,7 +864,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/h.jpg"
+                      src="/images/gas/h.webp"
                       alt="Gasoducto y ramal MEGA - Imagen 3"
                       fill
                       className="object-cover"
@@ -966,7 +966,7 @@ export default function GasPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/i.jpg"
+                      src="/images/gas/i.webp"
                       alt="Redes para distribución domiciliaria MEGA - Imagen 1"
                       fill
                       className="object-cover"
@@ -975,7 +975,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/j.jpg"
+                      src="/images/gas/j.webp"
                       alt="Redes para distribución domiciliaria MEGA - Imagen 2"
                       fill
                       className="object-cover"
@@ -984,7 +984,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/k.jpg"
+                      src="/images/gas/k.webp"
                       alt="Redes para distribución domiciliaria MEGA - Imagen 3"
                       fill
                       className="object-cover"
@@ -1130,7 +1130,7 @@ export default function GasPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/aa.jpg"
+                      src="/images/gas/aa.webp"
                       alt="Fabricación de equipos MEGA - Imagen 1"
                       fill
                       className="object-cover"
@@ -1139,7 +1139,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/bb.jpg"
+                      src="/images/gas/bb.webp"
                       alt="Fabricación de equipos MEGA - Imagen 2"
                       fill
                       className="object-cover"
@@ -1148,7 +1148,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/cc.jpg"
+                      src="/images/gas/cc.webp"
                       alt="Fabricación de equipos MEGA - Imagen 3"
                       fill
                       className="object-cover"
@@ -1251,7 +1251,7 @@ export default function GasPage() {
                 <h3 className="text-lg font-semibold text-foreground">Galería de ensayos</h3>
                 <div className="relative aspect-[16/9] rounded-2xl overflow-hidden max-w-2xl mx-auto">
                   <Image
-                    src="/images/gas/aaa.jpg"
+                    src="/images/gas/aaa.webp"
                     alt="Pruebas y ensayos no destructivos MEGA"
                     fill
                     className="object-cover"
@@ -1350,7 +1350,7 @@ export default function GasPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/bbb.jpg"
+                      src="/images/gas/bbb.webp"
                       alt="Ingeniería básica y de detalle MEGA - Imagen 1"
                       fill
                       className="object-cover"
@@ -1359,7 +1359,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/ccc.jpg"
+                      src="/images/gas/ccc.webp"
                       alt="Ingeniería básica y de detalle MEGA - Imagen 2"
                       fill
                       className="object-cover"
@@ -1368,7 +1368,7 @@ export default function GasPage() {
                   </div>
                   <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/gas/ddd.jpg"
+                      src="/images/gas/ddd.webp"
                       alt="Ingeniería básica y de detalle MEGA - Imagen 3"
                       fill
                       className="object-cover"

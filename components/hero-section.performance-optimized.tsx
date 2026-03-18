@@ -17,12 +17,12 @@ export function HeroSection() {
 
   // ✅ Memoizar cálculos de imagen basados en viewport
   const heroImage = useMemo(() => {
-    if (typeof window === 'undefined') return '/images/secadoras5.jpg'
+    if (typeof window === 'undefined') return '/images/secadoras5.webp'
     
     const width = window.innerWidth
-    if (width < 768) return '/images/secadoras5-mobile.jpg'
-    if (width < 1024) return '/images/secadoras5-tablet.jpg'
-    return '/images/secadoras5.jpg'
+    if (width < 768) return '/images/secadoras5-mobile.webp'
+    if (width < 1024) return '/images/secadoras5-tablet.webp'
+    return '/images/secadoras5.webp'
   }, [])
 
   const imageDimensions = useMemo(() => {

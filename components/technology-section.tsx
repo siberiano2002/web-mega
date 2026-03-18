@@ -126,7 +126,7 @@ export function TechnologySection() {
             <div className="mt-24 relative">
               <div className="relative aspect-[21/9] overflow-hidden">
                 <Image
-                  src="/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.png"
+                  src="/images/4d97461e-ec6f-49f2-b5f1-38ce434ce7db.webp"
                   alt="Control de calidad y tecnología industrial"
                   fill
                   className="object-cover"

@@ -58,7 +58,7 @@ export default function CalidadPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/engineering-team.jpg"
+            src="/images/engineering-team.webp"
             alt="Ingeniería MEGA - Calidad"
             fill
             className="object-cover"
@@ -110,7 +110,7 @@ export default function CalidadPage() {
               <div className="text-center max-w-sm mx-auto">
                 <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/QR-Certificados_ISO_9001_14001_45001_2025.png"
+                    src="/images/QR-Certificados_ISO_9001_14001_45001_2025.webp"
                     alt="INGENIERÍA MEGA - Calidad - Certificaciones ISO 9001, 14001, 45001 - 2025"
                     fill
                     className="object-contain"
@@ -144,7 +144,7 @@ Nuestros sistemas de gestión incluyen:
 • Sostenibilidad y responsabilidad social
 
 Estas certificaciones nos posicionan como líderes en la industria, demostrando nuestra capacidad para ofrecer soluciones de alta calidad con un enfoque responsable hacia el medio ambiente y la seguridad de nuestro personal.`,
-                    image: "/images/QR-Certificados_ISO_9001_14001_45001_2025.png"
+                    image: "/images/QR-Certificados_ISO_9001_14001_45001_2025.webp"
                   })}
                   className="px-8 py-4 bg-accent text-accent-foreground rounded-full font-semibold text-lg hover:bg-accent/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 >
