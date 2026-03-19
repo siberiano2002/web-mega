@@ -35,10 +35,10 @@ export function HeroSectionLCP({
         <div className="lg:hidden absolute inset-0">
           <Image
             src="/images/secadoras5-mobile.webp"
-            alt="Ingeniería MEGA - Soluciones industriales - Mobile"
+            alt="Secadoras de Granos"
             fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 1200px"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
         </div>
@@ -47,10 +47,10 @@ export function HeroSectionLCP({
         <div className="hidden lg:block xl:hidden absolute inset-0">
           <Image
             src="/images/secadoras5-tablet.webp"
-            alt="Ingeniería MEGA - Soluciones industriales - Tablet"
+            alt="Secadoras de Granos"
             fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 1200px"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
         </div>
@@ -59,10 +59,10 @@ export function HeroSectionLCP({
         <div className="hidden xl:block absolute inset-0">
           <Image
             src="/images/secadoras5.webp"
-            alt="Ingeniería MEGA - Soluciones industriales - Desktop"
+            alt="Secadoras de Granos"
             fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 1200px"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
         </div>
@@ -88,7 +88,7 @@ export function HeroSectionLCP({
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button 
                 asChild
-                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-6 py-2.5 sm:px-8 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-lg shadow-black/10 hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center rounded-full bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-2.5 sm:px-8 sm:py-3 text-sm sm:text-base font-semibold shadow-lg transition-colors"
               >
                 <a href={ctaHref}>
                   {ctaText}
