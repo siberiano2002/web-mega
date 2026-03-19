@@ -8,10 +8,17 @@ import dynamic from 'next/dynamic'
 import { Header } from "@/components/header"
 import { HeroSectionLCP } from "@/components/hero-section-lcp"
 import { KeyMetricsSection } from "@/components/key-metrics-section"
-import { FeaturesSection } from "@/components/features-section"
 import { CriticalCSS, useCriticalPreloads, LCPOptimizer } from "@/components/critical-css"
 
 // ✅ Componentes pesados con lazy loading para reducir bundle inicial
+const FeaturesSection = dynamic(
+  () => import("@/components/features-section").then(mod => ({ default: mod.FeaturesSection })),
+  { 
+    ssr: false,
+    loading: () => <div className="h-96 bg-gray-100 animate-pulse rounded-lg" />
+  }
+)
+
 const ServicesSection = dynamic(
   () => import("@/components/services-section").then(mod => ({ default: mod.ServicesSection })),
   { 
@@ -120,10 +127,11 @@ export default function HomePage() {
           <link rel="dns-prefetch" href="//vercel.live" />
           <link rel="dns-prefetch" href="//www.youtube.com" />
           
+          {/* ✅ Scripts no críticos con carga diferida para no bloquear render */}
           <Script
             id="structured-data"
             type="application/ld+json"
-            strategy="lazyOnload"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
@@ -151,6 +159,30 @@ export default function HomePage() {
                 }
               })
             }} 
+          />
+          
+          {/* ✅ Google Analytics con carga diferida para no bloquear render */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+            strategy="afterInteractive"
+            async
+          />
+          
+          {/* ✅ Google Tag Manager con carga diferida */}
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'GA_MEASUREMENT_ID', {
+                  page_title: document.title,
+                  page_location: window.location.href,
+                });
+              `
+            }}
           />
         </Head>
 

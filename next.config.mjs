@@ -16,9 +16,9 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   images: {
-    // ✅ Configuración optimizada para LCP y rendimiento
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // ✅ Configuración optimizada para cards de ~360px y diseño actual
+    deviceSizes: [320, 420, 640],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 60,
     // ✅ Calidades optimizadas para balance calidad/peso
     qualities: [75, 85, 90],
