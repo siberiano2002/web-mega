@@ -131,7 +131,7 @@ export function HeroWebPImage({
       priority={priority}
       className={`w-full h-full object-cover ${className}`}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
-      quality={85}
+      quality={60}
       placeholder="blur"
       fallback="/images/MEGA440.webp"
     />
@@ -159,8 +159,8 @@ export function ContentWebPImage({
       width={width}
       height={height}
       className={className}
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-      quality={75}
+      sizes="(max-width: 768px) 100vw, 360px"
+      quality={60}
       placeholder="blur"
     />
   )

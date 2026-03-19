@@ -5,6 +5,16 @@ const nextConfig = {
   },
   // ✅ Configuración de Turbopack para Next.js 16
   turbopack: {},
+  // ✅ Optimización para navegadores modernos - reducir polyfills innecesarios
+  experimental: {
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
+  // ✅ Configuración SWC para optimizar JavaScript moderno
+  swcMinify: true,
+  compiler: {
+    // ✅ Remover React displayName en producción para reducir bundle
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   images: {
     // ✅ Configuración optimizada para LCP y rendimiento
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -44,11 +54,41 @@ const nextConfig = {
     ],
   },
   // ✅ Configurar alias para que @/ apunte a la raíz del proyecto
-  webpack: (config) => {
+  webpack: (config, { isServer, dev }) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': './',
     }
+    
+    // ✅ Optimizar bundle para navegadores modernos
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      }
+    }
+    
+    // ✅ Reducir polyfills innecesarios en producción
+    if (process.env.NODE_ENV === 'production' && !dev) {
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          ...config.optimization.splitChunks,
+          chunks: 'all',
+          cacheGroups: {
+            ...config.optimization.splitChunks?.cacheGroups,
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+            },
+          },
+        },
+      }
+    }
+    
     return config
   },
 }

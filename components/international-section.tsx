@@ -218,32 +218,32 @@ export default function InternationalSection() {
 
         {/* Projects Section */}
         <AnimatedSection delay={300}>
-          <div className="text-center mb-12 mt-24">
+          <div className="text-center mb-12 mt-16">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">
               Casos de <span className="text-accent">éxito</span>
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-primary-foreground/5 rounded-xl p-4 border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 group"
+                className="bg-primary-foreground/5 rounded-xl p-2 sm:p-4 border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 group"
               >
-                <div className="flex items-start gap-4">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                <div className="flex flex-col items-center text-center">
+                  <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0 mb-2 sm:mb-4 ${
                     project.type === "Headquarters" 
                       ? "bg-accent text-accent-foreground" 
                       : "bg-primary-foreground/10 text-primary-foreground"
                   }`}>
-                    <MapPin className="w-5 h-5" />
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary-foreground mb-1">{project.country}</h4>
-                    <p className="text-sm text-primary-foreground/60 mb-2">{project.city}</p>
-                    <p className="text-xs text-primary-foreground/50 mb-3">{project.type}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-accent">{project.projects}</span>
+                    <h4 className="text-sm sm:text-base font-semibold text-primary-foreground mb-1">{project.country}</h4>
+                    <p className="text-xs sm:text-sm text-primary-foreground/60 mb-1 sm:mb-2">{project.city}</p>
+                    <p className="text-xs text-primary-foreground/50 mb-1 sm:mb-3">{project.type}</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+                      <span className="text-sm sm:text-lg font-bold text-accent">{project.projects}</span>
                       <span className="text-xs text-primary-foreground/50 uppercase">Proyectos</span>
                     </div>
                   </div>

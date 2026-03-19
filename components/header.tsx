@@ -86,7 +86,7 @@ export function Header({ forceDark = false }: { forceDark?: boolean }) {
                   alt="MEGA Logo" 
                   width={32} 
                   height={32}
-                  quality={85}
+                  quality={60}
                   sizes="32px"
                   className="transition-transform group-hover:scale-105"
                 />

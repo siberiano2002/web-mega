@@ -130,9 +130,9 @@ export function TechnologySection() {
                   alt="Control de calidad y tecnología industrial"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 1200px"
+                  sizes="(max-width: 768px) 100vw, 360px"
                   loading="lazy"
-                  quality={85}
+                  quality={60}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent" />
                 
