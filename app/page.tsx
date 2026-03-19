@@ -29,7 +29,7 @@ const TechnologySection = dynamic(
 )
 
 const InternationalSection = dynamic(
-  () => import("@/components/international-section").then(mod => ({ default: mod.InternationalSection })),
+  () => import("@/components/international-section").then(mod => ({ default: mod.default })),
   { 
     ssr: false,
     loading: () => <div className="h-96 bg-gray-100 animate-pulse rounded-lg" />
